@@ -17,6 +17,7 @@ namespace BlogDemo.Infrastructure.Database
         }
         public async Task<bool> SaveAsync()
         {
+
             return await _myContext.SaveChangesAsync() > 0;
         }
     }
