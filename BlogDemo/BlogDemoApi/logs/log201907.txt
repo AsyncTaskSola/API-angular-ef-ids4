@@ -1,0 +1,117 @@
+2019-07-04 16:06:14.954 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-04 16:06:16.487 +08:00 [INF] Executed DbCommand (98ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-04 16:06:16.643 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-07-04 16:06:17.479 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-07-04 16:06:32.060 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/posts  
+2019-07-04 16:06:32.262 +08:00 [INF] Request finished in 209.5753ms 307 
+2019-07-04 16:06:32.892 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts  
+2019-07-04 16:06:33.338 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-07-04 16:06:35.742 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-04 16:06:35.837 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-04 16:07:12.418 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-04 16:07:12.475 +08:00 [INF] Executed DbCommand (14ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "x"."Id", "x"."Author", "x"."Boby", "x"."LastModified", "x"."Remark", "x"."Title"
+FROM "Posts" AS "x"
+ORDER BY "x"."Id"
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-04 16:07:15.210 +08:00 [INF] value1
+2019-07-04 16:07:15.230 +08:00 [INF] Get All Post...
+2019-07-04 16:07:15.271 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 39459.3212ms.
+2019-07-04 16:07:15.411 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemoApi.Resources.PostResource, BlogDemoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-04 16:07:15.615 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 42256.6509ms
+2019-07-04 16:07:15.639 +08:00 [INF] Request finished in 42747.2055ms 200 application/json; charset=utf-8
+2019-07-04 16:08:39.021 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=3 text/plain 20
+2019-07-04 16:08:39.024 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-07-04 16:12:15.752 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-04 16:12:15.762 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-04 16:12:32.427 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-04 16:12:32.439 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "x"."Id", "x"."Author", "x"."Boby", "x"."LastModified", "x"."Remark", "x"."Title"
+FROM "Posts" AS "x"
+ORDER BY "x"."Id"
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-04 16:12:34.266 +08:00 [INF] value1
+2019-07-04 16:12:34.268 +08:00 [INF] Get All Post...
+2019-07-04 16:12:34.270 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 18512.7635ms.
+2019-07-04 16:12:34.525 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemoApi.Resources.PostResource, BlogDemoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-04 16:12:34.553 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 235525.21920000002ms
+2019-07-04 16:12:34.556 +08:00 [INF] Request finished in 235535.065ms 200 application/xml; charset=utf-8
+2019-07-04 16:12:34.582 +08:00 [INF] Connection id "0HLO0AQ2CAL9A", Request id "0HLO0AQ2CAL9A:00000001": the application completed without reading the entire request body.
+2019-07-04 16:24:38.034 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageSize=3&pageIndex=1 text/plain 20
+2019-07-04 16:24:38.036 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-07-04 16:24:50.306 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-04 16:24:50.312 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-04 16:24:57.706 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-04 16:24:57.713 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "x"."Id", "x"."Author", "x"."Boby", "x"."LastModified", "x"."Remark", "x"."Title"
+FROM "Posts" AS "x"
+ORDER BY "x"."Id"
+LIMIT @__p_0 OFFSET @__p_0
+2019-07-04 16:24:59.519 +08:00 [INF] value1
+2019-07-04 16:24:59.525 +08:00 [INF] Get All Post...
+2019-07-04 16:24:59.540 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9228.5744000000013ms.
+2019-07-04 16:24:59.571 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemoApi.Resources.PostResource, BlogDemoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-04 16:24:59.579 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 21540.5952ms
+2019-07-04 16:24:59.585 +08:00 [INF] Request finished in 21583.1347ms 200 application/xml; charset=utf-8
+2019-07-04 16:24:59.588 +08:00 [INF] Connection id "0HLO0AQ2CAL9A", Request id "0HLO0AQ2CAL9A:00000002": the application completed without reading the entire request body.
+2019-07-04 16:26:19.113 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-04 16:26:20.000 +08:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-04 16:26:20.067 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-07-04 16:26:20.435 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-07-04 16:26:26.924 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/posts  
+2019-07-04 16:26:26.982 +08:00 [INF] Request finished in 63.1107ms 307 
+2019-07-04 16:26:27.212 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts  
+2019-07-04 16:26:27.525 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-07-04 16:26:28.548 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-04 16:26:28.577 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-04 16:26:28.836 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-04 16:26:28.887 +08:00 [INF] Executed DbCommand (13ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "x"."Id", "x"."Author", "x"."Boby", "x"."LastModified", "x"."Remark", "x"."Title"
+FROM "Posts" AS "x"
+ORDER BY "x"."Id"
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-04 16:26:40.807 +08:00 [INF] value1
+2019-07-04 16:26:40.815 +08:00 [INF] Get All Post...
+2019-07-04 16:26:40.834 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 12257.797ms.
+2019-07-04 16:26:40.869 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemoApi.Resources.PostResource, BlogDemoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-04 16:26:41.066 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 13502.9968ms
+2019-07-04 16:26:41.098 +08:00 [INF] Request finished in 13886.1749ms 200 application/json; charset=utf-8
+2019-07-04 16:26:47.964 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageSize=3&pageIndex=1 text/plain 20
+2019-07-04 16:26:47.970 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-07-04 16:27:13.924 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-04 16:27:13.929 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-04 16:27:13.942 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-04 16:27:13.952 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "x"."Id", "x"."Author", "x"."Boby", "x"."LastModified", "x"."Remark", "x"."Title"
+FROM "Posts" AS "x"
+ORDER BY "x"."Id"
+LIMIT @__p_0 OFFSET @__p_0
+2019-07-04 16:28:04.647 +08:00 [INF] value1
+2019-07-04 16:28:04.675 +08:00 [INF] Get All Post...
+2019-07-04 16:28:04.753 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 50824.1727ms.
+2019-07-04 16:28:05.070 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemoApi.Resources.PostResource, BlogDemoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-04 16:28:05.102 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 77128.4096ms
+2019-07-04 16:28:05.107 +08:00 [INF] Request finished in 77143.9324ms 200 application/xml; charset=utf-8
+2019-07-04 16:28:05.136 +08:00 [INF] Connection id "0HLO0B56NGVUK", Request id "0HLO0B56NGVUK:00000001": the application completed without reading the entire request body.
+2019-07-04 16:29:17.291 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageSize=3&pageIndex=1 text/plain 20
+2019-07-04 16:29:17.300 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-07-04 16:30:18.210 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-04 16:30:18.214 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-04 16:34:08.580 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-04 16:34:08.587 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "x"."Id", "x"."Author", "x"."Boby", "x"."LastModified", "x"."Remark", "x"."Title"
+FROM "Posts" AS "x"
+ORDER BY "x"."Id"
+LIMIT @__p_0 OFFSET @__p_0

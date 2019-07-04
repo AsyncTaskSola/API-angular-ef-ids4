@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using BlogDemo.Core.Entities;
 using BlogDemo.Core.interfaces;
@@ -19,14 +20,36 @@ namespace BlogDemo.Infrastructure.Repositories
             _myContext = myContext;
         }
 
+        public async Task<Post> GetPostByIdAsync(int id)
+        {
+            return await _myContext.Posts.FindAsync(id);
+        }
+
         public void AddPost(Post post)
         {
             _myContext.Posts.Add(post);
         }
 
-        public async Task<IEnumerable<Post>> GetAllPostsAsync()
+        #region 这种是没翻页的
+
+        //public async Task<IEnumerable<Post>> GetAllPostsAsync()
+        //{
+        //    return await _myContext.Posts.ToListAsync();//查出所有数据
+        //}
+
+        #endregion
+
+        public async Task<IEnumerable<Post>> GetAllPostsAsync(PostParameters postParameters)
         {
-            return await _myContext.Posts.ToListAsync();//查出所有数据
+           //先排序
+            var query = _myContext.Posts.OrderBy(x => x.Id);
+            var refult= await query
+                .Skip(postParameters.PageIndex * postParameters.PageSize)
+                .Take(postParameters.PageSize)
+                .ToListAsync();
+            return refult;
+
         }
+
     }
 }
