@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Threading.Tasks;
 using AutoMapper;
 using BlogDemo.Core.Entities;
@@ -11,6 +12,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace BlogDemoApi.Controllers
 {
@@ -22,6 +25,7 @@ namespace BlogDemoApi.Controllers
         private readonly ILogger<PostController> _logger;
         private readonly IConfiguration _configuration;
         private readonly IMapper _mapper;
+        private readonly IUrlHelper _urlHelper;
 
         #region 之前写法，后用仓储
 
@@ -37,13 +41,15 @@ namespace BlogDemoApi.Controllers
             IUnitOfWork unitOfWork,
             ILogger<PostController>logger,
             IConfiguration configuration,
-            IMapper mapper)
+            IMapper mapper,
+            IUrlHelper urlHelper)
         {
             _postRepository = postRepository;
             _unitOfWork = unitOfWork;
             _logger = logger;
             _configuration = configuration;
             _mapper = mapper;
+            _urlHelper = urlHelper;
         }
 
 
@@ -66,7 +72,7 @@ namespace BlogDemoApi.Controllers
 
         #endregion
 
-        [HttpGet]
+        [HttpGet(Name="GetPosts")]
 
         public async Task<IActionResult> Get(PostParameters postParameters)
         {
@@ -74,6 +80,31 @@ namespace BlogDemoApi.Controllers
             var posts = await _postRepository.GetAllPostsAsync(postParameters);
             //映射
             var postresource = _mapper.Map<IEnumerable<Post>, IEnumerable<PostResource>>(posts);
+
+            var previousPageLink = posts.HasPrevious ?
+                CreatePostUri(postParameters,
+                    PaginationResourceUriType.PreviousPage) : null;
+
+            var nextPageLink = posts.HasNext ?
+                CreatePostUri(postParameters,
+                    PaginationResourceUriType.NextPage) : null;
+
+            var meta = new
+            {
+                Pagesize = posts.PageSize,
+                PageIndex = posts.PageIndex,
+                TotalItemsCount = posts.TotalItemsCount,
+                PageCount= posts.PageCount,
+                previousPageLink,
+                nextPageLink
+
+
+            };
+            Response.Headers.Add("X-Pagination",JsonConvert.SerializeObject(meta,new JsonSerializerSettings
+            {
+                //改成属性名小写
+                ContractResolver=new CamelCasePropertyNamesContractResolver()
+            }));
 
             _logger.LogInformation(_configuration["key"]);
             _logger.LogInformation("Get All Post...");
@@ -108,6 +139,44 @@ namespace BlogDemoApi.Controllers
             _postRepository.AddPost(newPost);
             await _unitOfWork.SaveAsync();
             return Ok();
+        }
+
+
+        private string CreatePostUri(PostParameters parameters, PaginationResourceUriType uriType)
+        {
+            switch (uriType)
+            {
+                case PaginationResourceUriType.PreviousPage:
+                    var previousParameters = new
+                    {
+                        pageIndex = parameters.PageIndex - 1,
+                        pageSize = parameters.PageSize,
+                        orderBy = parameters.OrderBy,
+                        fields = parameters.Fields,
+                        title = parameters.Title
+                    };
+                    return _urlHelper.Link("GetPosts", previousParameters);
+                case PaginationResourceUriType.NextPage:
+                    var nextParameters = new
+                    {
+                        pageIndex = parameters.PageIndex + 1,
+                        pageSize = parameters.PageSize,
+                        orderBy = parameters.OrderBy,
+                        fields = parameters.Fields,
+                        title = parameters.Title
+                    };
+                    return _urlHelper.Link("GetPosts", nextParameters);
+                default:
+                    var currentParameters = new
+                    {
+                        pageIndex = parameters.PageIndex,
+                        pageSize = parameters.PageSize,
+                        orderBy = parameters.OrderBy,
+                        fields = parameters.Fields,
+                        title = parameters.Title
+                    };
+                    return _urlHelper.Link("GetPosts", currentParameters);
+            }
         }
     }
 }

@@ -4,8 +4,10 @@ using System.Text;
 
 namespace BlogDemo.Core.Entities
 {
-   public class PostParameters:QueryParameters 
+    public enum PaginationResourceUriType
     {
-        public string Title { get; set; }
+        CurrentPage,
+        PreviousPage,
+        NextPage
     }
 }

@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 using BlogDemo.Core.Entities;
 using BlogDemo.Core.interfaces;
 using BlogDemo.Infrastructure.Database;
+using BlogDemo.Infrastructure.Exceptions;
+using BlogDemo.Infrastructure.Resources;
+using BlogDemo.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogDemo.Infrastructure.Repositories
@@ -14,10 +17,13 @@ namespace BlogDemo.Infrastructure.Repositories
    public class PostRepository:IPostRepository
     {
         private readonly MyContext _myContext;
+        private readonly IPropertyMappingContainer _propertyMappingContainer;
 
-        public PostRepository(MyContext myContext)
+        public PostRepository(MyContext myContext, 
+            IPropertyMappingContainer propertyMappingContainer)
         {
             _myContext = myContext;
+            _propertyMappingContainer = propertyMappingContainer;
         }
 
         public async Task<Post> GetPostByIdAsync(int id)
@@ -39,15 +45,31 @@ namespace BlogDemo.Infrastructure.Repositories
 
         #endregion
 
-        public async Task<IEnumerable<Post>> GetAllPostsAsync(PostParameters postParameters)
+        public async Task<PaginateList<Post>> GetAllPostsAsync(PostParameters postParameters)
         {
-           //先排序
-            var query = _myContext.Posts.OrderBy(x => x.Id);
-            var refult= await query
+            //先排序
+            //var query = _myContext.Posts.OrderBy(x => x.Id);
+
+            //过滤
+            var query = _myContext.Posts.AsQueryable();
+            if (!string.IsNullOrEmpty(postParameters.Title))
+            {
+                var title = postParameters.Title.ToLowerInvariant();
+                query = query.Where(x => x.Title.ToLowerInvariant()==title);
+            }
+            //容器
+
+
+            //query = query.OrderBy(x => x.Id);
+           // https://localhost:5001/api/posts?pageIndex=0&pageSize=10&orderBy=id 20desc 可以用倒序了 贼难
+            query = query.ApplySort(postParameters.OrderBy, _propertyMappingContainer.Resolve<PostResource, Post>());
+
+            var count = await query.CountAsync();
+            var data= await query
                 .Skip(postParameters.PageIndex * postParameters.PageSize)
                 .Take(postParameters.PageSize)
                 .ToListAsync();
-            return refult;
+            return new PaginateList<Post>(postParameters.PageIndex,postParameters.PageSize,count, data);
 
         }
 

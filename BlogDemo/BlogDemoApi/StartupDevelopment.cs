@@ -3,16 +3,22 @@ using AutoMapper;
 using BlogDemo.Core.interfaces;
 using BlogDemo.Infrastructure.Database;
 using BlogDemo.Infrastructure.Repositories;
+using BlogDemo.Infrastructure.Resources;
+using BlogDemo.Infrastructure.Services;
 using BlogDemoApi.Exceptions;
 using BlogDemoApi.Resources;
 using FluentValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using PostResource = BlogDemoApi.Resources.PostResource;
 
 namespace BlogDemoApi
 {
@@ -58,6 +64,19 @@ namespace BlogDemoApi
             }, AppDomain.CurrentDomain.GetAssemblies());
             //验证resource
             services.AddTransient<IValidator<PostResource>, PostResourceValidator>();
+
+            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+            services.AddScoped<IUrlHelper>(factory =>
+            {
+                var actionContext = factory.GetService<IActionContextAccessor>().ActionContext;
+                return new UrlHelper(actionContext);
+            });
+
+            //注册容器
+            var propertyMappingContainer = new PropertyMappingContainer();
+            propertyMappingContainer.Register<PostPropertyMapping>();
+            services.AddSingleton<IPropertyMappingContainer>(propertyMappingContainer);
+
         }
 
         public void Configure(IApplicationBuilder app,ILoggerFactory loggerFactory)
