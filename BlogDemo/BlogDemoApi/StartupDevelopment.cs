@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Net.Http.Formatting;
 using AutoMapper;
 using BlogDemo.Core.interfaces;
 using BlogDemo.Infrastructure.Database;
@@ -18,6 +20,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Serialization;
 using PostResource = BlogDemoApi.Resources.PostResource;
 
 namespace BlogDemoApi
@@ -36,8 +39,21 @@ namespace BlogDemoApi
             services.AddMvc(options =>
             {//406输入格式支持问题，默认application/json 现在添加application/xml的支持
                 options.ReturnHttpNotAcceptable = true;
-                options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
-            });
+                //options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
+
+                //创建特定的媒体类型
+                var outputFormatter=options.OutputFormatters.OfType<JsonOutputFormatter>().FirstOrDefault();
+                if (outputFormatter!=null)
+                {
+                    outputFormatter.SupportedMediaTypes.Add("application/vnd.cgzl.hateoas+json");
+                }
+            })
+                //这只是小写
+                .AddJsonOptions(options =>
+                {
+                    options.SerializerSettings.ContractResolver=new
+                                  CamelCasePropertyNamesContractResolver();
+                });
             //ef 直接建立到本地的了
             services.AddDbContext<MyContext>(
                 options =>
@@ -58,7 +74,7 @@ namespace BlogDemoApi
             //这些官网都有的，可以去看，连接在笔记中
 
             //映射
-            services.AddAutoMapper(ctf=>
+            services.AddAutoMapper(ctf =>
             {
                 ctf.AddProfile<MypingProfile>();
             }, AppDomain.CurrentDomain.GetAssemblies());
@@ -76,6 +92,9 @@ namespace BlogDemoApi
             var propertyMappingContainer = new PropertyMappingContainer();
             propertyMappingContainer.Register<PostPropertyMapping>();
             services.AddSingleton<IPropertyMappingContainer>(propertyMappingContainer);
+
+            //验证字段 临时服务
+            services.AddTransient<ITypeHelperService, TypeHelperService>();
 
         }
 

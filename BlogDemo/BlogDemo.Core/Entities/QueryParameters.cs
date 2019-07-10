@@ -48,7 +48,9 @@ namespace BlogDemo.Core.Entities
             set => SetField(ref _maxPageSize, value);
         }
 
-
+        /// <summary>
+        ///字段
+        /// </summary>
         public string Fields { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;

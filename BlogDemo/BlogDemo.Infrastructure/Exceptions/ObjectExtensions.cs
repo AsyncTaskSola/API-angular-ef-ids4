@@ -9,6 +9,13 @@ namespace BlogDemo.Infrastructure.Exceptions
 {
     public static class ObjectExtensions
     {
+        /// <summary>
+        /// 塑性模型（针对单个对象）
+        /// </summary>
+        /// <typeparam name="TSource"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="fields"></param>
+        /// <returns></returns>
         public static ExpandoObject ToDynamic<TSource>(this TSource source, string fields = null)
         {
             if (source == null)
