@@ -14,10 +14,11 @@ namespace BlogDemo.Core.Entities
         /// 显示第几页
         /// </summary>
         public int PageIndex { get; set; }
+
+        private int _totalItemsCount;
         /// <summary>
         /// 显示总数
         /// </summary>
-        private int _totalItemsCount;
 
         public int TotalItemsCount
         {

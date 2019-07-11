@@ -78,8 +78,11 @@ namespace BlogDemoApi
             {
                 ctf.AddProfile<MypingProfile>();
             }, AppDomain.CurrentDomain.GetAssemblies());
-            //验证resource
+
+            //验证resource 包含约束
             services.AddTransient<IValidator<PostResource>, PostResourceValidator>();
+
+            services.AddTransient<IValidator<PostAddResource>, PostAddOrUpdateResourceValidator<PostAddResource>>();
 
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             services.AddScoped<IUrlHelper>(factory =>

@@ -80,7 +80,7 @@ namespace BlogDemoApi.Controllers
         #endregion
 
         [HttpGet(Name = "GetPosts")]
-
+        //https://localhost:5001/api/posts?pageIndex=3&pageSize=3
 
         public async Task<IActionResult> Get(PostParameters postParameters,
         [FromHeader(Name = "Accept")]string mediaType)
@@ -142,8 +142,7 @@ namespace BlogDemoApi.Controllers
                     posts.PageIndex,
                     posts.TotalItemsCount,
                     posts.PageCount,
-
-
+                    posts.Count
                 };
                 Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(meta, new JsonSerializerSettings
                 {
@@ -175,13 +174,27 @@ namespace BlogDemoApi.Controllers
                     posts.TotalItemsCount,
                     posts.PageCount,
                     previousPageLink,
-                    nextPageLink
+                    nextPageLink,
+                    posts.Count
 
                 };
+
+                //这部分相当于把要的参数加入到标头了，显示相关的信息 posts.TotalItemsCount总数，posts.Count当前页面数 重要
+
+                Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(meta, new JsonSerializerSettings
+                {
+                    //改成属性名小写
+                    ContractResolver = new CamelCasePropertyNamesContractResolver()
+                }));
                 return Ok(postresource.ToDynamicIEnumerable (postParameters.Fields));
             }
         }
-
+        /// <summary>
+        /// 单个子段查询
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="fields"></param>
+        /// <returns></returns>
 
         [HttpGet("{id}", Name = "GetPost")]
         public async Task<IActionResult> Get(int id, string fields = null)
@@ -208,21 +221,53 @@ namespace BlogDemoApi.Controllers
             return Ok(result);
         }
 
+        #region 之前写的post
+        //[HttpPost]
+        //public async Task<IActionResult> Post()
+        //{
+        //    var newPost = new Post
+        //    {
+        //        Author = "admin",
+        //        Boby = "32123123123",
+        //        Title = "Title A",
+        //        LastModified = DateTime.Now
+        //    };
+        //    _postRepository.AddPost(newPost);
+        //    await _unitOfWork.SaveAsync();
+        //    return Ok();
+        //}
 
-        [HttpPost]
-        public async Task<IActionResult> Post()
+        #endregion
+
+        //第十讲 post添加
+        [HttpPost(Name = "GreatePost")]
+        public async Task<IActionResult> Post([FromBody] PostAddResource postAddResource)
         {
-            var newPost = new Post
+            if (postAddResource == null)
             {
-                Author = "admin",
-                Boby = "32123123123",
-                Title = "Title A",
-                LastModified = DateTime.Now
-            };
-            _postRepository.AddPost(newPost);
-            await _unitOfWork.SaveAsync();
-            return Ok();
+                return BadRequest();
+            }
+
+            var newPost = _mapper.Map<PostAddResource, Post>(postAddResource);
+            newPost.Author = "admin";
+            newPost.LastModified=DateTime.Now;
+            //这里是个坑，因为之前迁移表的时候PostConfiguration类中设置了IsRequired()的子段导致了这个值现在不能为空
+            newPost.Remark = "这里是个坑，因为之前迁移表的时候PostConfiguration类中设置了IsRequired()的子段导致了这个值现在不能为空";
+                _postRepository.AddPost(newPost);
+            if (!await _unitOfWork.SaveAsync())
+            {
+                throw new Exception("save failed");
+            }
+            var resultReosurece= _mapper.Map<Post, PostResource>(newPost);
+            var links = CreateLinksForPost(newPost.Id);
+            var linkedPostResource = resultReosurece.ToDynamic() as IDictionary<string, object>;
+            linkedPostResource.Add("Link",links);
+            
+           // return Ok(resultPost);
+            return CreatedAtRoute("GetPost", new {id = linkedPostResource["id"]}, resultReosurece);
         }
+      
+ 
 
 
         private string CreatePostUri(PostParameters parameters, PaginationResourceUriType uriType)
@@ -291,6 +336,13 @@ namespace BlogDemoApi.Controllers
             return links;
         }
 
+        /// <summary>
+        /// 针对翻页
+        /// </summary>
+        /// <param name="postResourceParameters"></param>
+        /// <param name="hasPrevious"></param>
+        /// <param name="hasNext"></param>
+        /// <returns></returns>
         private IEnumerable<LinkResource> CreateLinksForPosts(PostParameters postResourceParameters,
             bool hasPrevious, bool hasNext)
         {
