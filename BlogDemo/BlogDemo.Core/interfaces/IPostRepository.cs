@@ -8,9 +8,11 @@ namespace BlogDemo.Core.interfaces
     {
         //  Task<IEnumerable<Post>> GetAllPostsAsync();
         Task<PaginateList<Post>> GetAllPostsAsync(PostParameters postParameters);
-        void AddPost(Post post);
-
         Task<Post> GetPostByIdAsync(int id);
+        void AddPost(Post post);
+        void Delete(Post post);
+
+        void Update(Post post);
 
 
 

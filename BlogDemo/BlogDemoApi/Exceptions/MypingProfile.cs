@@ -18,6 +18,8 @@ namespace BlogDemoApi.Exceptions
                 .ForMember(dest=>dest.UpDateTime,opt=>opt.MapFrom(src=>src.LastModified));//建议了一个post道postResource的映射
             CreateMap< PostResource,Post>();
             CreateMap<PostAddResource, Post>();
+            CreateMap<PostUpdateResource, Post>();
         }
+        
     }
 }

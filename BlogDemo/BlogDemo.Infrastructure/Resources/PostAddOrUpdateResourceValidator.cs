@@ -12,6 +12,11 @@ namespace BlogDemo.Infrastructure.Resources
     {
         public PostAddOrUpdateResourceValidator()
         {
+            RuleFor(x => x.Remark)
+                .NotNull()
+                .WithName("信息")
+                .WithMessage("required|{PropertyName}是必填的  这里是个坑，因为之前迁移表的时候PostConfiguration类中设置了IsRequired()的子段导致了这个值现在不能为空");
+
             RuleFor(x => x.Title)
                 .NotNull()
                 .WithName("标题")
@@ -23,7 +28,7 @@ namespace BlogDemo.Infrastructure.Resources
                 .NotNull()
                 .WithName("正文")
                 .WithMessage("required|{{PropertyName}是必填的")
-                .MinimumLength(100)
+                .MinimumLength(10)
                 .WithMessage("minlength|{PropertyName}的最小长度是{MinLength}");
         }
     }

@@ -8,6 +8,8 @@ using BlogDemo.Core.interfaces;
 using BlogDemo.Infrastructure.Exceptions;
 using BlogDemo.Infrastructure.Resources;
 using BlogDemo.Infrastructure.Services;
+using BlogDemoApi.Helps;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Extensions.Configuration;
@@ -239,13 +241,18 @@ namespace BlogDemoApi.Controllers
 
         #endregion
 
-        //第十讲 post添加
+        //第十讲 7.11post添加  7.12model问题 7.15为了angular 的改动
         [HttpPost(Name = "GreatePost")]
         public async Task<IActionResult> Post([FromBody] PostAddResource postAddResource)
         {
             if (postAddResource == null)
             {
                 return BadRequest();
+            }
+            if(!ModelState.IsValid)
+            {
+                //return UnprocessableEntity(ModelState);
+                return new MyUnprocessableEntityObjectResult(ModelState);
             }
 
             var newPost = _mapper.Map<PostAddResource, Post>(postAddResource);
@@ -264,12 +271,96 @@ namespace BlogDemoApi.Controllers
             linkedPostResource.Add("Link",links);
             
            // return Ok(resultPost);
-            return CreatedAtRoute("GetPost", new {id = linkedPostResource["id"]}, resultReosurece);
+            return CreatedAtRoute("GetPost", new {id = linkedPostResource["id"]}, linkedPostResource);
         }
-      
- 
 
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="id">删除id</param>
+        /// <returns></returns>
 
+        [HttpDelete("{id}", Name = "DeletePost")]
+        public async Task<IActionResult> DeletePost(int id)
+        {
+            var post = await _postRepository.GetPostByIdAsync(id);
+            if(post==null)
+            {
+                return NotFound();
+            }
+            _postRepository.Delete(post);
+            if(!await _unitOfWork.SaveAsync())
+            {
+                throw new Exception($"Deleting post {id} failed when saving");
+            }
+            return NoContent();
+        }
+        /// <summary>
+        /// 全体更新put 少用 这里的name没用
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="postUpdate"></param>
+        /// <returns></returns>
+        [HttpPut("{id}", Name = "UpdatePost")]
+        public async Task<IActionResult> UpdatePost(int id,[FromBody]PostUpdateResource postUpdate)
+        {
+            if(postUpdate==null)
+            {
+                return BadRequest();
+            }
+            if(!ModelState.IsValid)
+            {
+                return new MyUnprocessableEntityObjectResult(ModelState);
+            }
+            var post = await _postRepository.GetPostByIdAsync(id);
+            if(post==null)
+            {
+                return NotFound();
+            }
+            post.LastModified = DateTime.Now;
+            _mapper.Map(postUpdate, post);
+            if (!await _unitOfWork.SaveAsync())
+            {
+                throw new Exception($"Deleting post {id} failed when saving");
+            }
+            return NoContent();
+        }
+        [HttpPatch("{id}",Name = "PartiallyUpdate")]
+        public async Task<IActionResult> PartiallyUpdateCityForCountry(int id,[FromBody]JsonPatchDocument<PostUpdateResource> patchDoc)
+        {
+            if(patchDoc==null)
+            {
+                return BadRequest();
+            }
+            var post = await _postRepository.GetPostByIdAsync(id);
+            if(post==null)
+            {
+                return NotFound();
+            }
+            var postTopatch = _mapper.Map<PostUpdateResource>(post);
+            patchDoc.ApplyTo(postTopatch, ModelState);
+            TryValidateModel(postTopatch);//手动验证
+            if (!ModelState.IsValid)
+            {
+                return new MyUnprocessableEntityObjectResult(ModelState);
+            }
+            _mapper.Map(postTopatch, post); 
+            post.LastModified = DateTime.Now;
+            _postRepository.Update(post);
+            if (!await _unitOfWork.SaveAsync())
+            {
+                throw new Exception($"Deleting post {id} failed when saving");
+            }
+            return NoContent();
+
+        }
+
+        /// <summary>
+        /// 用在翻页的
+        /// </summary>
+        /// <param name="parameters"></param>
+        /// <param name="uriType"></param>
+        /// <returns></returns>
         private string CreatePostUri(PostParameters parameters, PaginationResourceUriType uriType)
         {
             switch (uriType)

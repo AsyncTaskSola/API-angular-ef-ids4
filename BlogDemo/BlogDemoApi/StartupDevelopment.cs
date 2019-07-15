@@ -10,6 +10,7 @@ using BlogDemo.Infrastructure.Services;
 using BlogDemoApi.Exceptions;
 using BlogDemoApi.Resources;
 using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -41,13 +42,15 @@ namespace BlogDemoApi
                 options.ReturnHttpNotAcceptable = true;
                 //options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
 
-                //创建特定的媒体类型
+                //创建特定的媒体类型(输出)
                 var outputFormatter=options.OutputFormatters.OfType<JsonOutputFormatter>().FirstOrDefault();
                 if (outputFormatter!=null)
                 {
                     outputFormatter.SupportedMediaTypes.Add("application/vnd.cgzl.hateoas+json");
                 }
             })
+            //添加字段限制
+            .AddFluentValidation()
                 //这只是小写
                 .AddJsonOptions(options =>
                 {
@@ -80,9 +83,10 @@ namespace BlogDemoApi
             }, AppDomain.CurrentDomain.GetAssemblies());
 
             //验证resource 包含约束
-            services.AddTransient<IValidator<PostResource>, PostResourceValidator>();
+          //  services.AddTransient<IValidator<PostAddResource>, PostAddResourceValidator>();
 
             services.AddTransient<IValidator<PostAddResource>, PostAddOrUpdateResourceValidator<PostAddResource>>();
+            services.AddTransient<IValidator<PostUpdateResource>, PostAddOrUpdateResourceValidator<PostUpdateResource>>();
 
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             services.AddScoped<IUrlHelper>(factory =>
