@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Net.Http.Formatting;
 using AutoMapper;
 using BlogDemo.Core.interfaces;
 using BlogDemo.Infrastructure.Database;
@@ -8,12 +7,14 @@ using BlogDemo.Infrastructure.Repositories;
 using BlogDemo.Infrastructure.Resources;
 using BlogDemo.Infrastructure.Services;
 using BlogDemoApi.Exceptions;
-using BlogDemoApi.Resources;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using IdentityServer4.AccessTokenValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
@@ -22,7 +23,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
-using PostResource = BlogDemoApi.Resources.PostResource;
 
 namespace BlogDemoApi
 {
@@ -72,6 +72,19 @@ namespace BlogDemoApi
                 options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
                 options.HttpsPort = 5001;
             });
+
+            #region identityServer4
+
+            services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+                .AddIdentityServerAuthentication(options =>
+                {
+                    options.Authority = "https://localhost:5001";
+                    options.ApiName = "restapi";
+                });
+            
+
+            #endregion
+
             services.AddScoped<IPostRepository, PostRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             //这些官网都有的，可以去看，连接在笔记中
@@ -103,6 +116,13 @@ namespace BlogDemoApi
             //验证字段 临时服务
             services.AddTransient<ITypeHelperService, TypeHelperService>();
 
+            //全局加入身份验证  
+            services.Configure<MvcOptions>(options =>
+            {
+                var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+                options.Filters.Add(new AuthorizeFilter(policy));
+            });
+
         }
 
         public void Configure(IApplicationBuilder app,ILoggerFactory loggerFactory)
@@ -114,6 +134,7 @@ namespace BlogDemoApi
             //app.UseExceptionHandler();
             app.UserMyExceptionHander(loggerFactory);
             app.UseHttpsRedirection();
+            app.UseAuthentication();
             app.UseMvc();
         }
     }
