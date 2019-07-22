@@ -6397,3 +6397,125 @@ LIMIT @__p_1 OFFSET @__p_0
 2019-07-17 18:15:19.401 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]]'.
 2019-07-17 18:15:19.414 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 106.21520000000001ms
 2019-07-17 18:15:19.434 +08:00 [INF] Request finished in 143.5221ms 200 application/json; charset=utf-8
+2019-07-19 15:06:18.988 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-19 15:06:19.769 +08:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-19 15:06:19.847 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-07-19 15:06:20.099 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-07-22 16:59:07.587 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-22 16:59:08.204 +08:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-22 16:59:08.250 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-07-22 16:59:08.415 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-07-22 17:09:31.099 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-07-22 17:09:31.170 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-07-22 17:09:31.428 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-07-22 17:09:32.114 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters","application/vnd.cgzl.hateoas+json"]) - Validation state: "Valid"
+2019-07-22 17:09:32.158 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-22 17:09:32.595 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-22 17:09:32.615 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-22 17:09:32.762 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-22 17:09:32.802 +08:00 [INF] Executed DbCommand (14ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-22 17:09:32.967 +08:00 [INF] value1
+2019-07-22 17:09:32.968 +08:00 [INF] Get All Post...
+2019-07-22 17:09:32.974 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 844.1284ms.
+2019-07-22 17:09:32.985 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[BlogDemo.Infrastructure.Resources.LinkResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-07-22 17:09:33.036 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 1600.3785ms
+2019-07-22 17:09:33.044 +08:00 [INF] Request finished in 1949.3153ms 200 application/vnd.cgzl.hateoas+json; charset=utf-8
+2019-07-22 17:10:43.646 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-07-22 17:10:43.656 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-07-22 17:10:43.673 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-07-22 17:10:43.687 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters","application/vnd.cgzl.hateoas+json"]) - Validation state: "Valid"
+2019-07-22 17:10:43.712 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-22 17:10:43.768 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-22 17:10:43.795 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-22 17:10:43.828 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-22 17:10:43.860 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-22 17:10:43.894 +08:00 [INF] value1
+2019-07-22 17:10:43.924 +08:00 [INF] Get All Post...
+2019-07-22 17:10:43.939 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 227.18970000000002ms.
+2019-07-22 17:10:43.953 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[BlogDemo.Infrastructure.Resources.LinkResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-07-22 17:10:44.031 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 349.1705ms
+2019-07-22 17:10:44.108 +08:00 [INF] Request finished in 461.9774ms 200 application/vnd.cgzl.hateoas+json; charset=utf-8
+2019-07-22 17:43:21.802 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-07-22 17:43:21.808 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-07-22 17:43:21.826 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-07-22 17:43:22.249 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters","application/vnd.cgzl.hateoas+json"]) - Validation state: "Valid"
+2019-07-22 17:43:22.265 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-22 17:43:22.276 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-22 17:43:22.281 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-22 17:43:22.294 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-22 17:43:22.303 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-22 17:43:22.318 +08:00 [INF] value1
+2019-07-22 17:43:22.320 +08:00 [INF] Get All Post...
+2019-07-22 17:43:22.327 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 66.6986ms.
+2019-07-22 17:43:22.336 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[BlogDemo.Infrastructure.Resources.LinkResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-07-22 17:43:22.357 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 116.8871ms
+2019-07-22 17:43:22.363 +08:00 [INF] Request finished in 561.6308ms 200 application/vnd.cgzl.hateoas+json; charset=utf-8
+2019-07-22 17:51:02.170 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-22 17:51:02.830 +08:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-22 17:51:02.890 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-07-22 17:51:03.167 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-07-22 17:53:32.734 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-22 17:53:33.183 +08:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-22 17:53:33.234 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-07-22 17:53:33.430 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-07-22 17:53:47.731 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-07-22 17:53:47.864 +08:00 [INF] CORS policy execution successful.
+2019-07-22 17:53:47.925 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-07-22 17:53:48.134 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-07-22 17:53:48.139 +08:00 [INF] CORS policy execution successful.
+2019-07-22 17:53:48.667 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters","application/vnd.cgzl.hateoas+json"]) - Validation state: "Valid"
+2019-07-22 17:53:48.724 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-22 17:53:49.015 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-22 17:53:49.038 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-22 17:53:49.142 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-22 17:53:49.169 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-22 17:53:49.329 +08:00 [INF] value1
+2019-07-22 17:53:49.333 +08:00 [INF] Get All Post...
+2019-07-22 17:53:49.340 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 641.29320000000007ms.
+2019-07-22 17:53:49.355 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[BlogDemo.Infrastructure.Resources.LinkResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-07-22 17:53:49.399 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 1258.0111000000002ms
+2019-07-22 17:53:49.410 +08:00 [INF] Request finished in 1680.4145ms 200 application/vnd.cgzl.hateoas+json; charset=utf-8

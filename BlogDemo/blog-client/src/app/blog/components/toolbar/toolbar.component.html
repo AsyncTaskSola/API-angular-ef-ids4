@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+
+
+        <!-- 这个只是促发右边的菜单栏，要不要都一样 -->
+        <!-- //toolbar.component.ts  toggleSidenav  emit弹出-->
+        <button mat-button class="rightMenu" (click)="toggleSidenav.emit()">
+          <mat-icon aria-label="Drawer Menu" svgIcon="baseline-menu"></mat-icon>
+        </button>
+      
+        <span>A .NET Core Blog</span>
+      
+        <span class="toolbar-spacer"></span>
+      
+        <button mat-button [matMenuTriggerFor]="menu">
+                <mat-icon svgIcon="more_vert"></mat-icon>
+        </button>
+      
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Sign In</button>
+          <button mat-menu-item>Sign out</button>
+        </mat-menu>
+      
+      </mat-toolbar>
+      

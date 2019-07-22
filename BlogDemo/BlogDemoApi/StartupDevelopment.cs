@@ -15,6 +15,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.AspNetCore.Mvc.Cors;
+using Microsoft.AspNetCore.Mvc.Cors.Internal;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
@@ -43,8 +45,8 @@ namespace BlogDemoApi
                 //options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
 
                 //创建特定的媒体类型(输出)
-                var outputFormatter=options.OutputFormatters.OfType<JsonOutputFormatter>().FirstOrDefault();
-                if (outputFormatter!=null)
+                var outputFormatter = options.OutputFormatters.OfType<JsonOutputFormatter>().FirstOrDefault();
+                if (outputFormatter != null)
                 {
                     outputFormatter.SupportedMediaTypes.Add("application/vnd.cgzl.hateoas+json");
                 }
@@ -54,7 +56,7 @@ namespace BlogDemoApi
                 //这只是小写
                 .AddJsonOptions(options =>
                 {
-                    options.SerializerSettings.ContractResolver=new
+                    options.SerializerSettings.ContractResolver = new
                                   CamelCasePropertyNamesContractResolver();
                 });
             //ef 直接建立到本地的了
@@ -81,7 +83,7 @@ namespace BlogDemoApi
                     options.Authority = "https://localhost:5001";
                     options.ApiName = "restapi";
                 });
-            
+
 
             #endregion
 
@@ -96,7 +98,7 @@ namespace BlogDemoApi
             }, AppDomain.CurrentDomain.GetAssemblies());
 
             //验证resource 包含约束
-          //  services.AddTransient<IValidator<PostAddResource>, PostAddResourceValidator>();
+            //  services.AddTransient<IValidator<PostAddResource>, PostAddResourceValidator>();
 
             services.AddTransient<IValidator<PostAddResource>, PostAddOrUpdateResourceValidator<PostAddResource>>();
             services.AddTransient<IValidator<PostUpdateResource>, PostAddOrUpdateResourceValidator<PostUpdateResource>>();
@@ -116,16 +118,33 @@ namespace BlogDemoApi
             //验证字段 临时服务
             services.AddTransient<ITypeHelperService, TypeHelperService>();
 
+            //跨域
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAngularDevOrign"
+                    , builder =>
+                        builder.WithOrigins("http://localhost:4200")//起源
+                        .WithHeaders("X-pagination")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod());
+            });
+
+
+            //https://docs.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-2.2
             //全局加入身份验证  
             services.Configure<MvcOptions>(options =>
             {
-                var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+                options.Filters.Add(new CorsAuthorizationFilterFactory("AllowAngularDevOrign"));
+                var policy = new AuthorizationPolicyBuilder()
+                    .RequireAuthenticatedUser()
+                    .Build();
                 options.Filters.Add(new AuthorizeFilter(policy));
             });
 
         }
 
-        public void Configure(IApplicationBuilder app,ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             //在页面上直接显示数据
             app.UseDeveloperExceptionPage();
@@ -133,6 +152,7 @@ namespace BlogDemoApi
             //因为是API不建议在页面直接显示出来，建议使用json
             //app.UseExceptionHandler();
             app.UserMyExceptionHander(loggerFactory);
+            app.UseCors("AllowAngularDevOrign");
             app.UseHttpsRedirection();
             app.UseAuthentication();
             app.UseMvc();

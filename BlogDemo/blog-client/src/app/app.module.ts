@@ -7,6 +7,7 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 
 
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule
     // MatButtonModule,
     // MatCheckboxModule
 

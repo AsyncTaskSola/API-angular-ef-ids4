@@ -3,7 +3,7 @@
         <mat-drawer #drawer class="app-sidenav mat-elevation-z10" 
         [mode]="isScreenSmall() ? 'over' : 'side'" 
         [opened]="!isScreenSmall()">  
-         
+
           <mat-toolbar color="primary">
             Blog Demo
           </mat-toolbar>
@@ -13,9 +13,13 @@
           </mat-nav-list>
       
         </mat-drawer>
-      
+      <!-- 仅仅用于打开关闭，左边菜单没什么用 -->
         <div class="app-sidenav-content">
-         
+         <app-toolbar (toggleSidenav)="drawer.toggle()"></app-toolbar>
+         <div class="warpper">
+             <router-outlet></router-outlet>
+         </div>
+
         </div>
       
       </mat-drawer-container>

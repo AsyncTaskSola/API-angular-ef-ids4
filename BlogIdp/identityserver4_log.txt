@@ -486,3 +486,17 @@
 2019-07-17 18:19:56.899 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
 2019-07-17 18:19:56.901 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
 2019-07-17 18:19:56.905 +08:00 [DBG] Start discovery request
+2019-07-19 15:07:21.087 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-19 15:07:21.155 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-19 15:07:21.163 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-19 15:07:21.163 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-19 15:07:21.164 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-19 15:07:21.164 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-19 15:07:21.164 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-22 16:59:29.183 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-22 16:59:29.239 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-22 16:59:29.247 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-22 16:59:29.247 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-22 16:59:29.247 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-22 16:59:29.248 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-22 16:59:29.248 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid

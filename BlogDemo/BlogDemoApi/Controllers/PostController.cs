@@ -9,6 +9,7 @@ using BlogDemo.Infrastructure.Exceptions;
 using BlogDemo.Infrastructure.Resources;
 using BlogDemo.Infrastructure.Services;
 using BlogDemoApi.Helps;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -20,6 +21,7 @@ using PostResource = BlogDemoApi.Resources.PostResource;
 
 namespace BlogDemoApi.Controllers
 {
+    [AllowAnonymous]//允许匿名用户反问，测试。因为全局设置了权限
     [Route("api/posts")]
     public class PostController : Controller
     {
