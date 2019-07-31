@@ -8,10 +8,16 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RequireAuthenticatedUserRouteGuard } from './shared/oidc/require-authenticated-user-route.guard';
+import { OpenIdConnectService } from './shared/oidc/open-id-connect.service';
+import { SigninOidcComponent } from './shared/oidc/signin-oidc/signin-oidc.component';
+import { RedirectSilentRenewComponent } from './shared/oidc/redirect-silent-renew/redirect-silent-renew.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SigninOidcComponent,
+    RedirectSilentRenewComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
     // MatCheckboxModule
 
   ],
-  providers: [],
+  providers: [
+    OpenIdConnectService,
+    RequireAuthenticatedUserRouteGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

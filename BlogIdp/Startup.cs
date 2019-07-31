@@ -91,9 +91,22 @@ namespace BlogIdp
                 options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
                 options.HttpsPort = 5001;
             });
-            #endregion
 
-        }
+
+            //跨域，基本和api一样
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AngularDev", policy =>
+                {
+                    policy.WithOrigins("http://localhost:4200")//起源
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
+        
+        #endregion
+
+    }
 
         public void Configure(IApplicationBuilder app)
         {
@@ -109,6 +122,9 @@ namespace BlogIdp
                 app.UseHsts();
 
             }
+            //添加跨域
+            app.UseCors();
+
             //添加https
             app.UseHttpsRedirection();
 

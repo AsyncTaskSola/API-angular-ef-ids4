@@ -62,7 +62,7 @@ namespace MvcClient
                     options.Scope.Add("openid");
                     options.Scope.Add("profile");
                     options.Scope.Add("email");
-                    options.Scope.Add("restapi");
+                    options.Scope.Add("restapi");//范围已经覆盖在api了
                     options.GetClaimsFromUserInfoEndpoint = true;//是否重用户端点再获取一些浏览信息
                 });
 

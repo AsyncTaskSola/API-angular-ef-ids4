@@ -10,14 +10,17 @@
         <span>A .NET Core Blog</span>
       
         <span class="toolbar-spacer"></span>
+        <span *ngIf='openIdConnectService.userAvailable'>{{openIdConnectService.user.profile.name}}</span>
       
         <button mat-button [matMenuTriggerFor]="menu">
                 <mat-icon svgIcon="more_vert"></mat-icon>
         </button>
       
         <mat-menu #menu="matMenu">
-          <button mat-menu-item>Sign In</button>
-          <button mat-menu-item>Sign out</button>
+          <!-- <button mat-menu-item>Sign In</button>
+          <button mat-menu-item>Sign out</button> -->
+            <button mat-menu-item *ngIf='!openIdConnectService.userAvailable' (click)="openIdConnectService.triggerSignIn()">Sign In</button>
+            <button mat-menu-item *ngIf='openIdConnectService.userAvailable' (click)="openIdConnectService.triggerSignOut()">Sign out</button>      
         </mat-menu>
       
       </mat-toolbar>

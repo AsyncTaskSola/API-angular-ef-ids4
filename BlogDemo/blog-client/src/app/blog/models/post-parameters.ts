@@ -6,6 +6,7 @@ export class postparmeters extends QueryParameters
 
     constructor(init?:Partial<postparmeters>) {
         super(init);
+        Object.assign(this, init);
         
     }
 }

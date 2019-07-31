@@ -72,7 +72,7 @@ namespace BlogDemoApi
             services.AddHttpsRedirection(options =>
             {
                 options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
-                options.HttpsPort = 5001;
+                options.HttpsPort = 6001;
             });
 
             #region identityServer4
@@ -125,12 +125,11 @@ namespace BlogDemoApi
                 options.AddPolicy("AllowAngularDevOrign"
                     , builder =>
                         builder.WithOrigins("http://localhost:4200")//起源
-                        .WithHeaders("X-pagination")
+                            .WithHeaders("X-pagination")
                         .AllowAnyHeader()
                         .AllowAnyMethod());
             });
-
-
+             
             //https://docs.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-2.2
             //全局加入身份验证  
             services.Configure<MvcOptions>(options =>

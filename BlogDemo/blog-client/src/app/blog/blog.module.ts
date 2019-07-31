@@ -7,9 +7,10 @@ import { BlogAppComponent } from './blog-app.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PostService } from './services/post.service';
 import { PostListComponent } from './components/post-list/post-list.component';
+import { AuthorizationHeaderInterceptor } from '../shared/oidc/authorization-header-interceptor.interceptor.ts';
 
 
 
@@ -24,6 +25,13 @@ import { PostListComponent } from './components/post-list/post-list.component';
    [BlogAppComponent
     , SidenavComponent, ToolbarComponent, PostListComponent],
 
-    providers:[PostService]
+    providers: [
+      PostService,
+      {
+        provide: HTTP_INTERCEPTORS,
+        useClass: AuthorizationHeaderInterceptor,
+        multi: true
+      }
+    ]
 })
 export class BlogModule { }

@@ -21,7 +21,7 @@ using PostResource = BlogDemoApi.Resources.PostResource;
 
 namespace BlogDemoApi.Controllers
 {
-    [AllowAnonymous]//允许匿名用户反问，测试。因为全局设置了权限
+   // [AllowAnonymous]//允许匿名用户反问，测试。因为全局设置了权限
     [Route("api/posts")]
     public class PostController : Controller
     {
