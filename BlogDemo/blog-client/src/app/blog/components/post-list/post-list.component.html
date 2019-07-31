@@ -3,8 +3,9 @@
 <div>
     <ng-container *ngFor="let item of posts">
     
-    <p>{{item.title}}</p>
-        <hr/>
+    <!-- {{item.title}} -->
+        
+    <app-post-card [post]="item"></app-post-card>
   
     </ng-container>
     

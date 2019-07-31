@@ -23,11 +23,11 @@ export class PostListComponent implements OnInit {
   getPosts()
   {
     this.postService.getPagedPosts(this.postParameter).subscribe(resp=>{
-      // console.log(resp.body);        
+      console.log(resp.body);        
       let pageMeta = resp.headers.get('X-Pagination');
       console.log(pageMeta ,"我也不知道为什么事空的，反正应该返回的是X-Pagination相关数值");
       const result={...resp.body}as ResultWithLinks<Post>
-      // console.dir(result);
+       console.dir(result);
       this.posts=result.value;
     });
     

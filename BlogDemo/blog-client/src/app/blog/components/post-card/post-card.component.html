@@ -1,0 +1,25 @@
+<mat-card class="post-card">
+        <mat-card-header class="post-card-header">
+          <div mat-card-avatar>
+            <img class="avatar" [src]="'/assets/default-user.png'">
+          </div>
+          <mat-card-title>
+            <b>{{post.title}}</b>
+          </mat-card-title>
+          
+          <mat-card-subtitle>{{post.upDateTime | date: 'medium'}} by {{post.author}}</mat-card-subtitle>
+        </mat-card-header>
+        <!-- <mat-card-content>
+            
+          </mat-card-content> -->
+        <mat-card-actions>
+          <button mat-button>
+            LIKE
+          </button>
+      
+          <button mat-button>
+            SHARE
+          </button>
+        </mat-card-actions>
+      </mat-card>
+      
