@@ -82,6 +82,7 @@ namespace BlogDemoApi.Controllers
         //}
 
         #endregion
+        [AllowAnonymous]
 
         [HttpGet(Name = "GetPosts")]
         //https://localhost:5001/api/posts?pageIndex=3&pageSize=3
@@ -200,6 +201,7 @@ namespace BlogDemoApi.Controllers
         /// <param name="fields"></param>
         /// <returns></returns>
 
+        [AllowAnonymous]
         [HttpGet("{id}", Name = "GetPost")]
         public async Task<IActionResult> Get(int id, string fields = null)
         {
@@ -242,7 +244,7 @@ namespace BlogDemoApi.Controllers
         //}
 
         #endregion
-
+        [AllowAnonymous]
         //第十讲 7.11post添加  7.12model问题 7.15为了angular 的改动
         [HttpPost(Name = "GreatePost")]
         public async Task<IActionResult> Post([FromBody] PostAddResource postAddResource)
@@ -251,18 +253,25 @@ namespace BlogDemoApi.Controllers
             {
                 return BadRequest();
             }
-            if(!ModelState.IsValid)
+
+            #region 本来应该启动这个验证的，但是由于自定义问题reamke的问题导致，所以gg 2019.8.2已经重新迁移填坑
+            if (!ModelState.IsValid)
             {
                 //return UnprocessableEntity(ModelState);
                 return new MyUnprocessableEntityObjectResult(ModelState);
             }
+            #endregion
 
             var newPost = _mapper.Map<PostAddResource, Post>(postAddResource);
             newPost.Author = "admin";
-            newPost.LastModified=DateTime.Now;
+            newPost.LastModified = DateTime.Now;
+
             //这里是个坑，因为之前迁移表的时候PostConfiguration类中设置了IsRequired()的子段导致了这个值现在不能为空
-            newPost.Remark = "这里是个坑，因为之前迁移表的时候PostConfiguration类中设置了IsRequired()的子段导致了这个值现在不能为空";
-                _postRepository.AddPost(newPost);
+            //2019.8.2已经重新迁移填坑
+            //newPost.Remark = "这里是个坑，因为之前迁移表的时候PostConfiguration类中设置了IsRequired()的子段导致了这个值现在不能为空";
+
+            _postRepository.AddPost(newPost);
+
             if (!await _unitOfWork.SaveAsync())
             {
                 throw new Exception("save failed");

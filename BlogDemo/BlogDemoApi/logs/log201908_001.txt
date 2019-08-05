@@ -1,0 +1,1056 @@
+2019-08-01 18:32:19.464 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-01 18:32:21.076 +08:00 [INF] Executed DbCommand (178ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-01 18:32:21.305 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-08-01 18:32:22.649 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-08-01 18:32:32.843 +08:00 [FTL] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address https://127.0.0.1:6001: address already in use. ---> Microsoft.AspNetCore.Connections.AddressInUseException: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。 ---> System.Net.Sockets.SocketException: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransport.BindAsync()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransport.BindAsync()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2019-08-01 18:33:45.015 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-01 18:33:45.734 +08:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-01 18:33:45.777 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-08-01 18:33:46.201 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-08-01 18:33:49.780 +08:00 [FTL] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address https://127.0.0.1:6001: address already in use. ---> Microsoft.AspNetCore.Connections.AddressInUseException: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。 ---> System.Net.Sockets.SocketException: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransport.BindAsync()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransport.BindAsync()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2019-08-01 18:34:54.447 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-01 18:34:55.221 +08:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-01 18:34:55.282 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-08-01 18:34:55.626 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-08-01 18:35:14.271 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:4200/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-01 18:35:14.619 +08:00 [INF] Request finished in 350.0996ms 307 
+2019-08-01 18:35:14.800 +08:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-01 18:35:14.806 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:35:14.812 +08:00 [INF] Request finished in 11.7499ms 204 
+2019-08-01 18:35:14.840 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-01 18:35:14.842 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:35:18.058 +08:00 [INF] Successfully validated the token.
+2019-08-01 18:35:18.065 +08:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-08-01 18:35:18.267 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-08-01 18:35:18.278 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:35:20.940 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters","application/vnd.cgzl.hateoas+json"]) - Validation state: "Valid"
+2019-08-01 18:35:24.506 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-01 18:35:25.666 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-01 18:35:25.686 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-08-01 18:35:25.781 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-01 18:35:25.807 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-08-01 18:35:32.077 +08:00 [INF] value1
+2019-08-01 18:35:32.079 +08:00 [INF] Get All Post...
+2019-08-01 18:35:32.087 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 11120.7762ms.
+2019-08-01 18:35:32.105 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[BlogDemo.Infrastructure.Resources.LinkResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-08-01 18:35:32.161 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 13884.225400000001ms
+2019-08-01 18:35:32.201 +08:00 [INF] Request finished in 17360.5064ms 200 application/vnd.cgzl.hateoas+json; charset=utf-8
+2019-08-01 18:36:15.368 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:4200/api/posts application/json 67
+2019-08-01 18:36:15.369 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:36:15.371 +08:00 [INF] Request finished in 3.42ms 307 
+2019-08-01 18:36:15.402 +08:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/posts  
+2019-08-01 18:36:15.416 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:36:15.418 +08:00 [INF] Request finished in 15.7925ms 204 
+2019-08-01 18:36:15.427 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 67
+2019-08-01 18:36:15.429 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:36:15.434 +08:00 [INF] Successfully validated the token.
+2019-08-01 18:36:15.436 +08:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-08-01 18:36:15.446 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-01 18:36:15.449 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:36:15.463 +08:00 [INF] Authorization was successful.
+2019-08-01 18:36:15.598 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) with arguments (["BlogDemo.Infrastructure.Resources.PostAddResource"]) - Validation state: "Invalid"
+2019-08-01 18:50:53.166 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:4200/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-01 18:50:55.040 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:4200/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-01 18:50:57.830 +08:00 [INF] Request finished in 4626.896ms 0 
+2019-08-01 18:50:53.731 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:4200/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-01 18:50:57.832 +08:00 [INF] Request finished in 4023.9302ms 307 
+2019-08-01 18:51:02.133 +08:00 [INF] Request finished in 8402.0092ms 0 
+2019-08-01 18:51:23.300 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Post (BlogDemoApi), returned result BlogDemoApi.Helps.MyUnprocessableEntityObjectResult in 907698.7676ms.
+2019-08-01 18:51:23.311 +08:00 [INF] Executing ObjectResult, writing value of type 'BlogDemoApi.Helps.ResourceValidationResult'.
+2019-08-01 18:51:23.323 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) in 907873.7508ms
+2019-08-01 18:51:23.328 +08:00 [INF] Request finished in 907900.2616ms 422 application/json; charset=utf-8
+2019-08-01 18:51:44.604 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:4200/api/posts application/json 67
+2019-08-01 18:51:44.606 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:51:44.611 +08:00 [INF] Request finished in 7.0237ms 307 
+2019-08-01 18:51:44.648 +08:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/posts  
+2019-08-01 18:51:44.650 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:51:44.652 +08:00 [INF] Request finished in 3.6733ms 204 
+2019-08-01 18:51:44.662 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 67
+2019-08-01 18:51:44.665 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:51:44.816 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2019-08-01 18:51:44.907 +08:00 [INF] BearerIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+2019-08-01 18:51:44.911 +08:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+2019-08-01 18:51:44.919 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-01 18:51:44.924 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:51:44.927 +08:00 [INF] Authorization failed.
+2019-08-01 18:51:44.936 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-08-01 18:51:44.943 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-08-01 18:51:44.961 +08:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2019-08-01 18:51:44.964 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2019-08-01 18:51:44.967 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) in 43.0691ms
+2019-08-01 18:51:44.970 +08:00 [INF] Request finished in 308.138ms 401 
+2019-08-01 18:51:44.980 +08:00 [INF] Connection id "0HLOMDFJAOOK7", Request id "0HLOMDFJAOOK7:00000002": the application completed without reading the entire request body.
+2019-08-01 18:51:48.225 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:4200/api/posts application/json 67
+2019-08-01 18:51:48.228 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:51:48.259 +08:00 [INF] Request finished in 33.2456ms 307 
+2019-08-01 18:51:48.296 +08:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/posts  
+2019-08-01 18:51:48.299 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:51:48.308 +08:00 [INF] Request finished in 12.6418ms 204 
+2019-08-01 18:51:48.326 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 67
+2019-08-01 18:51:48.329 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:51:48.439 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2019-08-01 18:51:48.457 +08:00 [INF] BearerIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+2019-08-01 18:51:48.465 +08:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+2019-08-01 18:51:48.473 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-01 18:51:48.484 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:51:48.495 +08:00 [INF] Authorization failed.
+2019-08-01 18:51:48.506 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-08-01 18:51:48.509 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-08-01 18:51:48.513 +08:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2019-08-01 18:51:48.515 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2019-08-01 18:51:48.518 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) in 34.7887ms
+2019-08-01 18:51:48.523 +08:00 [INF] Request finished in 197.2133ms 401 
+2019-08-01 18:51:48.530 +08:00 [INF] Connection id "0HLOMDFJAOOK9", Request id "0HLOMDFJAOOK9:00000002": the application completed without reading the entire request body.
+2019-08-01 18:51:53.781 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:4200/api/posts application/json 67
+2019-08-01 18:51:53.783 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:51:53.786 +08:00 [INF] Request finished in 5.0071ms 307 
+2019-08-01 18:51:53.803 +08:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/posts  
+2019-08-01 18:51:53.807 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:51:53.815 +08:00 [INF] Request finished in 12.6166ms 204 
+2019-08-01 18:51:53.879 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 67
+2019-08-01 18:51:53.881 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:51:53.985 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2019-08-01 18:51:54.001 +08:00 [INF] BearerIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+2019-08-01 18:51:54.004 +08:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+2019-08-01 18:51:54.009 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-01 18:51:54.014 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:51:54.018 +08:00 [INF] Authorization failed.
+2019-08-01 18:51:54.020 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-08-01 18:51:54.022 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-08-01 18:51:54.028 +08:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2019-08-01 18:51:54.031 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2019-08-01 18:51:54.033 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) in 19.0877ms
+2019-08-01 18:51:54.035 +08:00 [INF] Request finished in 193.9678ms 401 
+2019-08-01 18:51:54.044 +08:00 [INF] Connection id "0HLOMDFJAOOK9", Request id "0HLOMDFJAOOK9:00000004": the application completed without reading the entire request body.
+2019-08-01 18:52:13.202 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:4200/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-01 18:52:13.208 +08:00 [INF] Request finished in 6.21ms 307 
+2019-08-01 18:52:13.891 +08:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-01 18:52:13.945 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:52:13.949 +08:00 [INF] Request finished in 57.7613ms 204 
+2019-08-01 18:52:13.955 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-01 18:52:13.960 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:52:13.965 +08:00 [INF] Successfully validated the token.
+2019-08-01 18:52:13.967 +08:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-08-01 18:52:13.970 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-08-01 18:52:13.978 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:52:16.963 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters","application/vnd.cgzl.hateoas+json"]) - Validation state: "Valid"
+2019-08-01 18:52:19.856 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-01 18:52:19.875 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-01 18:52:19.885 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-08-01 18:52:19.895 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-01 18:52:19.903 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-08-01 18:52:25.114 +08:00 [INF] value1
+2019-08-01 18:52:25.116 +08:00 [INF] Get All Post...
+2019-08-01 18:52:25.119 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8133.2091ms.
+2019-08-01 18:52:25.127 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[BlogDemo.Infrastructure.Resources.LinkResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-08-01 18:52:25.140 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 11162.2949ms
+2019-08-01 18:52:25.152 +08:00 [INF] Request finished in 11196.0467ms 200 application/vnd.cgzl.hateoas+json; charset=utf-8
+2019-08-01 18:52:43.168 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:4200/api/posts application/json 78
+2019-08-01 18:52:43.170 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:52:43.176 +08:00 [INF] Request finished in 7.1268ms 307 
+2019-08-01 18:52:43.201 +08:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/posts  
+2019-08-01 18:52:43.205 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:52:43.208 +08:00 [INF] Request finished in 7.2003ms 204 
+2019-08-01 18:52:43.213 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 78
+2019-08-01 18:52:43.216 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:52:43.225 +08:00 [INF] Successfully validated the token.
+2019-08-01 18:52:43.227 +08:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-08-01 18:52:43.230 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-01 18:52:43.242 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:52:43.245 +08:00 [INF] Authorization was successful.
+2019-08-01 18:52:43.305 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) with arguments (["BlogDemo.Infrastructure.Resources.PostAddResource"]) - Validation state: "Invalid"
+2019-08-01 18:53:15.063 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Post (BlogDemoApi), returned result BlogDemoApi.Helps.MyUnprocessableEntityObjectResult in 31754.102000000003ms.
+2019-08-01 18:53:15.068 +08:00 [INF] Executing ObjectResult, writing value of type 'BlogDemoApi.Helps.ResourceValidationResult'.
+2019-08-01 18:53:15.072 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) in 31830.444000000003ms
+2019-08-01 18:53:15.079 +08:00 [INF] Request finished in 31865.9909ms 422 application/json; charset=utf-8
+2019-08-01 18:54:16.648 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:4200/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-01 18:54:16.653 +08:00 [INF] Request finished in 5.7048ms 307 
+2019-08-01 18:54:16.899 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-01 18:54:16.905 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:54:16.914 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-01 18:54:16.918 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-08-01 18:54:16.929 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:54:20.184 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters","application/vnd.cgzl.hateoas+json"]) - Validation state: "Valid"
+2019-08-01 18:54:21.837 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:4200/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-01 18:54:23.671 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-01 18:54:23.701 +08:00 [INF] Request finished in 1864.2437ms 0 
+2019-08-01 18:54:23.707 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-01 18:54:23.715 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-08-01 18:54:23.725 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-01 18:54:23.731 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-08-01 18:54:29.008 +08:00 [INF] value1
+2019-08-01 18:54:29.010 +08:00 [INF] Get All Post...
+2019-08-01 18:54:29.013 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8823.2282ms.
+2019-08-01 18:54:29.024 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[BlogDemo.Infrastructure.Resources.LinkResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-08-01 18:54:29.037 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 12108.4729ms
+2019-08-01 18:54:29.042 +08:00 [INF] Request finished in 12142.7666ms 200 application/vnd.cgzl.hateoas+json; charset=utf-8
+2019-08-01 18:56:02.924 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-01 18:56:03.663 +08:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-01 18:56:03.707 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-08-01 18:56:04.037 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-08-01 18:56:29.004 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:4200/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-01 18:56:29.384 +08:00 [INF] Request finished in 381.986ms 307 
+2019-08-01 18:56:29.586 +08:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-01 18:56:29.592 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:56:29.598 +08:00 [INF] Request finished in 12.5089ms 204 
+2019-08-01 18:56:29.608 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-01 18:56:29.609 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:56:33.333 +08:00 [INF] Successfully validated the token.
+2019-08-01 18:56:33.345 +08:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-08-01 18:56:33.534 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-08-01 18:56:33.539 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:56:35.980 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters","application/vnd.cgzl.hateoas+json"]) - Validation state: "Valid"
+2019-08-01 18:56:38.947 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-01 18:56:40.163 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-01 18:56:40.196 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-08-01 18:56:40.304 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-01 18:56:40.343 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-08-01 18:56:45.804 +08:00 [INF] value1
+2019-08-01 18:56:45.806 +08:00 [INF] Get All Post...
+2019-08-01 18:56:45.813 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9812.542300000001ms.
+2019-08-01 18:56:45.838 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[BlogDemo.Infrastructure.Resources.LinkResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-08-01 18:56:45.896 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 12353.3452ms
+2019-08-01 18:56:45.932 +08:00 [INF] Request finished in 16323.9965ms 200 application/vnd.cgzl.hateoas+json; charset=utf-8
+2019-08-01 18:57:07.642 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:4200/api/posts application/json 75
+2019-08-01 18:57:07.645 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:57:07.647 +08:00 [INF] Request finished in 5.4033ms 307 
+2019-08-01 18:57:07.729 +08:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/posts  
+2019-08-01 18:57:07.730 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:57:07.735 +08:00 [INF] Request finished in 6.0537ms 204 
+2019-08-01 18:57:07.745 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 75
+2019-08-01 18:57:07.753 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:57:07.760 +08:00 [INF] Successfully validated the token.
+2019-08-01 18:57:07.790 +08:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-08-01 18:57:07.802 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-01 18:57:07.806 +08:00 [INF] CORS policy execution successful.
+2019-08-01 18:57:07.835 +08:00 [INF] Authorization was successful.
+2019-08-01 18:57:08.067 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) with arguments (["BlogDemo.Infrastructure.Resources.PostAddResource"]) - Validation state: "Invalid"
+2019-08-01 18:57:31.550 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-02 12:38:16.125 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-02 12:38:16.992 +08:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 12:38:17.042 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-08-02 12:38:17.394 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-08-02 12:40:48.165 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:4200/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-02 12:40:48.366 +08:00 [INF] Request finished in 201.2677ms 307 
+2019-08-02 12:40:48.625 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-02 12:40:48.641 +08:00 [INF] CORS policy execution successful.
+2019-08-02 12:41:06.276 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-02 12:41:06.530 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-08-02 12:41:06.537 +08:00 [INF] CORS policy execution successful.
+2019-08-02 12:41:11.561 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters","application/vnd.cgzl.hateoas+json"]) - Validation state: "Valid"
+2019-08-02 12:41:16.655 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-02 12:41:17.821 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 12:41:17.846 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-08-02 12:41:17.974 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 12:41:18.005 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-08-02 12:41:23.425 +08:00 [INF] value1
+2019-08-02 12:41:23.432 +08:00 [INF] Get All Post...
+2019-08-02 12:41:23.439 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 11856.3608ms.
+2019-08-02 12:41:23.460 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[BlogDemo.Infrastructure.Resources.LinkResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-08-02 12:41:23.516 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 16976.4982ms
+2019-08-02 12:41:23.528 +08:00 [INF] Request finished in 34902.9126ms 200 application/vnd.cgzl.hateoas+json; charset=utf-8
+2019-08-02 12:41:33.996 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:4200/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-02 12:41:33.998 +08:00 [INF] Request finished in 2.5311ms 307 
+2019-08-02 12:41:34.166 +08:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-02 12:41:34.170 +08:00 [INF] CORS policy execution successful.
+2019-08-02 12:41:34.173 +08:00 [INF] Request finished in 6.2541ms 204 
+2019-08-02 12:41:34.178 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-02 12:41:34.182 +08:00 [INF] CORS policy execution successful.
+2019-08-02 12:41:34.946 +08:00 [INF] Successfully validated the token.
+2019-08-02 12:41:34.954 +08:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-08-02 12:41:34.958 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-08-02 12:41:34.961 +08:00 [INF] CORS policy execution successful.
+2019-08-02 12:41:41.101 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters","application/vnd.cgzl.hateoas+json"]) - Validation state: "Valid"
+2019-08-02 12:41:44.441 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-02 12:41:44.453 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 12:41:44.460 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-08-02 12:41:44.467 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 12:41:44.472 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-08-02 12:41:49.482 +08:00 [INF] value1
+2019-08-02 12:41:49.484 +08:00 [INF] Get All Post...
+2019-08-02 12:41:49.486 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8378.0036ms.
+2019-08-02 12:41:49.490 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[BlogDemo.Infrastructure.Resources.LinkResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-08-02 12:41:49.496 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 14534.4138ms
+2019-08-02 12:41:49.507 +08:00 [INF] Request finished in 15329.2109ms 200 application/vnd.cgzl.hateoas+json; charset=utf-8
+2019-08-02 12:43:41.621 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:4200/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-02 12:43:41.624 +08:00 [INF] Request finished in 2.7026ms 307 
+2019-08-02 12:43:42.933 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-02 12:43:42.981 +08:00 [INF] CORS policy execution successful.
+2019-08-02 12:43:43.008 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-02 12:43:43.026 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-08-02 12:43:43.038 +08:00 [INF] CORS policy execution successful.
+2019-08-02 12:43:48.392 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters","application/vnd.cgzl.hateoas+json"]) - Validation state: "Valid"
+2019-08-02 12:43:52.179 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-02 12:43:52.205 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 12:43:52.210 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-08-02 12:43:52.216 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 12:43:52.222 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-08-02 12:43:57.104 +08:00 [INF] value1
+2019-08-02 12:43:57.114 +08:00 [INF] Get All Post...
+2019-08-02 12:43:57.118 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8719.1242ms.
+2019-08-02 12:43:57.125 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[BlogDemo.Infrastructure.Resources.LinkResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-08-02 12:43:57.131 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 14092.249300000001ms
+2019-08-02 12:43:57.134 +08:00 [INF] Request finished in 14200.9798ms 200 application/vnd.cgzl.hateoas+json; charset=utf-8
+2019-08-02 12:45:14.345 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 449
+2019-08-02 12:45:14.404 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-02 12:45:14.450 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-02 12:45:14.463 +08:00 [INF] Authorization failed.
+2019-08-02 12:45:14.467 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-08-02 12:45:14.474 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-08-02 12:45:14.491 +08:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2019-08-02 12:45:14.493 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2019-08-02 12:45:14.495 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) in 41.5863ms
+2019-08-02 12:45:14.497 +08:00 [INF] Request finished in 153.1159ms 401 
+2019-08-02 12:45:14.518 +08:00 [INF] Connection id "0HLON0CVJ2EOF", Request id "0HLON0CVJ2EOF:00000001": the application completed without reading the entire request body.
+2019-08-02 12:45:17.922 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 449
+2019-08-02 12:45:17.924 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-02 12:45:17.927 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-02 12:45:17.932 +08:00 [INF] Authorization failed.
+2019-08-02 12:45:17.936 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-08-02 12:45:17.938 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-08-02 12:45:17.941 +08:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2019-08-02 12:45:17.942 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2019-08-02 12:45:17.944 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) in 13.8382ms
+2019-08-02 12:45:17.948 +08:00 [INF] Request finished in 26.6275ms 401 
+2019-08-02 12:45:17.951 +08:00 [INF] Connection id "0HLON0CVJ2EOF", Request id "0HLON0CVJ2EOF:00000002": the application completed without reading the entire request body.
+2019-08-02 12:45:19.122 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 449
+2019-08-02 12:45:19.124 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-02 12:45:19.127 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-02 12:45:19.138 +08:00 [INF] Authorization failed.
+2019-08-02 12:45:19.147 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-08-02 12:45:19.149 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-08-02 12:45:19.152 +08:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2019-08-02 12:45:19.154 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2019-08-02 12:45:19.156 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) in 17.787300000000002ms
+2019-08-02 12:45:19.159 +08:00 [INF] Request finished in 36.8846ms 401 
+2019-08-02 12:45:19.171 +08:00 [INF] Connection id "0HLON0CVJ2EOF", Request id "0HLON0CVJ2EOF:00000003": the application completed without reading the entire request body.
+2019-08-02 12:45:20.172 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 449
+2019-08-02 12:45:20.201 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-02 12:45:20.205 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-02 12:45:20.228 +08:00 [INF] Authorization failed.
+2019-08-02 12:45:20.242 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-08-02 12:45:20.252 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-08-02 12:45:20.264 +08:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2019-08-02 12:45:20.267 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2019-08-02 12:45:20.276 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) in 42.294200000000004ms
+2019-08-02 12:45:20.280 +08:00 [INF] Request finished in 108.2495ms 401 
+2019-08-02 12:45:20.283 +08:00 [INF] Connection id "0HLON0CVJ2EOF", Request id "0HLON0CVJ2EOF:00000004": the application completed without reading the entire request body.
+2019-08-02 12:53:52.386 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-02 12:53:53.173 +08:00 [INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 12:53:53.240 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-08-02 12:53:53.595 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-08-02 12:56:03.485 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 449
+2019-08-02 12:56:09.950 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-02 12:56:10.286 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-02 12:56:11.604 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) with arguments (["BlogDemo.Infrastructure.Resources.PostAddResource"]) - Validation state: "Invalid"
+2019-08-02 12:57:04.500 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-02 12:57:05.188 +08:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 12:57:05.231 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-08-02 12:57:05.621 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-08-02 12:57:19.749 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 449
+2019-08-02 12:57:23.185 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-02 12:57:23.460 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-02 12:57:24.809 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) with arguments (["BlogDemo.Infrastructure.Resources.PostAddResource"]) - Validation state: "Invalid"
+2019-08-02 12:57:59.743 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Post (BlogDemoApi), returned result BlogDemoApi.Helps.MyUnprocessableEntityObjectResult in 34916.7215ms.
+2019-08-02 12:57:59.762 +08:00 [INF] Executing ObjectResult, writing value of type 'BlogDemoApi.Helps.ResourceValidationResult'.
+2019-08-02 12:57:59.838 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) in 36350.1612ms
+2019-08-02 12:57:59.866 +08:00 [INF] Request finished in 40117.823ms 422 application/json; charset=utf-8
+2019-08-02 13:00:49.017 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-02 13:00:49.806 +08:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 13:00:49.851 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-08-02 13:00:50.214 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-08-02 13:00:59.080 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 449
+2019-08-02 13:01:02.355 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-02 13:01:02.668 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-02 13:01:04.013 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) with arguments (["BlogDemo.Infrastructure.Resources.PostAddResource"]) - Validation state: "Valid"
+2019-08-02 13:03:44.733 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-02 13:03:45.604 +08:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 13:03:45.682 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-08-02 13:03:46.147 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-08-02 13:03:57.083 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 449
+2019-08-02 13:04:03.678 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-02 13:04:04.020 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-02 13:04:05.576 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) with arguments (["BlogDemo.Infrastructure.Resources.PostAddResource"]) - Validation state: "Valid"
+2019-08-02 13:04:20.902 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-02 13:04:34.606 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 13:04:36.155 +08:00 [ERR] Failed executing DbCommand (1,295ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 418), @p2='?', @p3='?', @p4='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Posts" ("Author", "Boby", "LastModified", "Remark", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "Posts"
+WHERE changes() = 1 AND "Id" = last_insert_rowid();
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Posts.Remark'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+2019-08-02 13:04:37.847 +08:00 [ERR] An exception occurred in the database while saving changes for context type 'BlogDemo.Infrastructure.Database.MyContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Microsoft.Data.Sqlite.SqliteException: SQLite Error 19: 'NOT NULL constraint failed: Posts.Remark'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Microsoft.Data.Sqlite.SqliteException: SQLite Error 19: 'NOT NULL constraint failed: Posts.Remark'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2019-08-02 13:04:55.048 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) in 51021.2323ms
+2019-08-02 13:04:55.477 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Microsoft.Data.Sqlite.SqliteException: SQLite Error 19: 'NOT NULL constraint failed: Posts.Remark'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BlogDemo.Infrastructure.Database.UnitOfWork.SaveAsync() in G:\杨旭的ids4\API-angular-ef-ids4\BlogDemo\BlogDemo.Infrastructure\Database\UnitOfWork.cs:line 21
+   at BlogDemoApi.Controllers.PostController.Post(PostAddResource postAddResource) in G:\杨旭的ids4\API-angular-ef-ids4\BlogDemo\BlogDemoApi\Controllers\PostController.cs:line 275
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-08-02 13:04:55.744 +08:00 [ERR] An error occurred while updating the entries. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Microsoft.Data.Sqlite.SqliteException: SQLite Error 19: 'NOT NULL constraint failed: Posts.Remark'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BlogDemo.Infrastructure.Database.UnitOfWork.SaveAsync() in G:\杨旭的ids4\API-angular-ef-ids4\BlogDemo\BlogDemo.Infrastructure\Database\UnitOfWork.cs:line 21
+   at BlogDemoApi.Controllers.PostController.Post(PostAddResource postAddResource) in G:\杨旭的ids4\API-angular-ef-ids4\BlogDemo\BlogDemoApi\Controllers\PostController.cs:line 275
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-08-02 13:04:55.895 +08:00 [INF] Request finished in 58813.3937ms 500 application/json
+2019-08-02 13:26:33.109 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-02 13:26:33.949 +08:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 13:26:33.995 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-08-02 13:26:34.413 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-08-02 13:26:53.549 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 449
+2019-08-02 13:26:58.056 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-02 13:26:58.497 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-02 13:27:00.180 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) with arguments (["BlogDemo.Infrastructure.Resources.PostAddResource"]) - Validation state: "Valid"
+2019-08-02 13:28:51.787 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-02 13:28:55.648 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 13:28:56.338 +08:00 [INF] Executed DbCommand (389ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 418), @p2='?', @p3='?', @p4='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Posts" ("Author", "Boby", "LastModified", "Remark", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "Posts"
+WHERE changes() = 1 AND "Id" = last_insert_rowid();
+2019-08-02 13:29:16.509 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) in 137992.0538ms
+2019-08-02 13:29:16.851 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: The specified key 'id' does not exist in the ExpandoObject.
+   at System.Dynamic.ExpandoObject.System.Collections.Generic.IDictionary<System.String,System.Object>.get_Item(String key)
+   at BlogDemoApi.Controllers.PostController.Post(PostAddResource postAddResource) in G:\杨旭的ids4\API-angular-ef-ids4\BlogDemo\BlogDemoApi\Controllers\PostController.cs:line 285
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-08-02 13:29:17.052 +08:00 [ERR] The specified key 'id' does not exist in the ExpandoObject.
+System.Collections.Generic.KeyNotFoundException: The specified key 'id' does not exist in the ExpandoObject.
+   at System.Dynamic.ExpandoObject.System.Collections.Generic.IDictionary<System.String,System.Object>.get_Item(String key)
+   at BlogDemoApi.Controllers.PostController.Post(PostAddResource postAddResource) in G:\杨旭的ids4\API-angular-ef-ids4\BlogDemo\BlogDemoApi\Controllers\PostController.cs:line 285
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-08-02 13:29:17.099 +08:00 [INF] Request finished in 143550.5789ms 500 application/json
+2019-08-02 13:33:19.464 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 62
+2019-08-02 13:33:19.478 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-02 13:33:19.481 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-02 13:33:19.563 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) with arguments (["BlogDemo.Infrastructure.Resources.PostAddResource"]) - Validation state: "Valid"
+2019-08-02 13:40:00.747 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-02 13:40:05.077 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 13:40:05.097 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 31), @p2='?', @p3='?', @p4='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Posts" ("Author", "Boby", "LastModified", "Remark", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "Posts"
+WHERE changes() = 1 AND "Id" = last_insert_rowid();
+2019-08-02 13:40:22.591 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) in 423106.0701ms
+2019-08-02 13:40:22.821 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: The specified key 'id' does not exist in the ExpandoObject.
+   at System.Dynamic.ExpandoObject.System.Collections.Generic.IDictionary<System.String,System.Object>.get_Item(String key)
+   at BlogDemoApi.Controllers.PostController.Post(PostAddResource postAddResource) in G:\杨旭的ids4\API-angular-ef-ids4\BlogDemo\BlogDemoApi\Controllers\PostController.cs:line 285
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-08-02 13:40:22.885 +08:00 [ERR] The specified key 'id' does not exist in the ExpandoObject.
+System.Collections.Generic.KeyNotFoundException: The specified key 'id' does not exist in the ExpandoObject.
+   at System.Dynamic.ExpandoObject.System.Collections.Generic.IDictionary<System.String,System.Object>.get_Item(String key)
+   at BlogDemoApi.Controllers.PostController.Post(PostAddResource postAddResource) in G:\杨旭的ids4\API-angular-ef-ids4\BlogDemo\BlogDemoApi\Controllers\PostController.cs:line 285
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-08-02 13:40:22.957 +08:00 [INF] Request finished in 423492.9876ms 500 application/json
+2019-08-02 13:43:54.249 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 81
+2019-08-02 13:43:54.271 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-02 13:43:54.274 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-02 13:43:54.351 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) with arguments (["BlogDemo.Infrastructure.Resources.PostAddResource"]) - Validation state: "Valid"
+2019-08-02 13:44:55.745 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-02 13:45:02.468 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 13:45:02.518 +08:00 [INF] Executed DbCommand (43ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 31), @p2='?', @p3='?', @p4='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Posts" ("Author", "Boby", "LastModified", "Remark", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "Posts"
+WHERE changes() = 1 AND "Id" = last_insert_rowid();
+2019-08-02 13:45:44.706 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) in 110429.611ms
+2019-08-02 13:45:44.953 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: The specified key 'id' does not exist in the ExpandoObject.
+   at System.Dynamic.ExpandoObject.System.Collections.Generic.IDictionary<System.String,System.Object>.get_Item(String key)
+   at BlogDemoApi.Controllers.PostController.Post(PostAddResource postAddResource) in G:\杨旭的ids4\API-angular-ef-ids4\BlogDemo\BlogDemoApi\Controllers\PostController.cs:line 285
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-08-02 13:45:44.980 +08:00 [ERR] The specified key 'id' does not exist in the ExpandoObject.
+System.Collections.Generic.KeyNotFoundException: The specified key 'id' does not exist in the ExpandoObject.
+   at System.Dynamic.ExpandoObject.System.Collections.Generic.IDictionary<System.String,System.Object>.get_Item(String key)
+   at BlogDemoApi.Controllers.PostController.Post(PostAddResource postAddResource) in G:\杨旭的ids4\API-angular-ef-ids4\BlogDemo\BlogDemoApi\Controllers\PostController.cs:line 285
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-08-02 13:45:45.013 +08:00 [INF] Request finished in 110763.3351ms 500 application/json
+2019-08-02 13:46:45.134 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 81
+2019-08-02 13:46:45.136 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-02 13:46:45.138 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-02 13:46:45.197 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) with arguments (["BlogDemo.Infrastructure.Resources.PostAddResource"]) - Validation state: "Valid"
+2019-08-02 13:47:35.810 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-02 13:47:38.272 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 13:47:38.347 +08:00 [INF] Executed DbCommand (69ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 31), @p2='?', @p3='?', @p4='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Posts" ("Author", "Boby", "LastModified", "Remark", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "Posts"
+WHERE changes() = 1 AND "Id" = last_insert_rowid();
+2019-08-02 13:47:51.013 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) in 65872.4433ms
+2019-08-02 13:47:51.239 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: The specified key 'id' does not exist in the ExpandoObject.
+   at System.Dynamic.ExpandoObject.System.Collections.Generic.IDictionary<System.String,System.Object>.get_Item(String key)
+   at BlogDemoApi.Controllers.PostController.Post(PostAddResource postAddResource) in G:\杨旭的ids4\API-angular-ef-ids4\BlogDemo\BlogDemoApi\Controllers\PostController.cs:line 285
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-08-02 13:47:51.290 +08:00 [ERR] The specified key 'id' does not exist in the ExpandoObject.
+System.Collections.Generic.KeyNotFoundException: The specified key 'id' does not exist in the ExpandoObject.
+   at System.Dynamic.ExpandoObject.System.Collections.Generic.IDictionary<System.String,System.Object>.get_Item(String key)
+   at BlogDemoApi.Controllers.PostController.Post(PostAddResource postAddResource) in G:\杨旭的ids4\API-angular-ef-ids4\BlogDemo\BlogDemoApi\Controllers\PostController.cs:line 285
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-08-02 13:47:51.398 +08:00 [INF] Request finished in 66283.999ms 500 application/json
+2019-08-02 13:48:02.015 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/posts application/json 81
+2019-08-02 13:48:02.016 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-02 13:48:02.021 +08:00 [INF] Route matched with {action = "Post", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi)
+2019-08-02 13:48:02.077 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) with arguments (["BlogDemo.Infrastructure.Resources.PostAddResource"]) - Validation state: "Valid"
+2019-08-02 13:48:19.938 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-02 13:48:37.775 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-02 13:48:37.856 +08:00 [INF] Executed DbCommand (35ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 31), @p2='?', @p3='?' (Size = 6), @p4='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Posts" ("Author", "Boby", "LastModified", "Remark", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "Posts"
+WHERE changes() = 1 AND "Id" = last_insert_rowid();
+2019-08-02 13:49:12.561 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Post (BlogDemoApi) in 70535.419600000008ms
+2019-08-02 13:49:12.773 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: The specified key 'id' does not exist in the ExpandoObject.
+   at System.Dynamic.ExpandoObject.System.Collections.Generic.IDictionary<System.String,System.Object>.get_Item(String key)
+   at BlogDemoApi.Controllers.PostController.Post(PostAddResource postAddResource) in G:\杨旭的ids4\API-angular-ef-ids4\BlogDemo\BlogDemoApi\Controllers\PostController.cs:line 285
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-08-02 13:49:12.795 +08:00 [ERR] The specified key 'id' does not exist in the ExpandoObject.
+System.Collections.Generic.KeyNotFoundException: The specified key 'id' does not exist in the ExpandoObject.
+   at System.Dynamic.ExpandoObject.System.Collections.Generic.IDictionary<System.String,System.Object>.get_Item(String key)
+   at BlogDemoApi.Controllers.PostController.Post(PostAddResource postAddResource) in G:\杨旭的ids4\API-angular-ef-ids4\BlogDemo\BlogDemoApi\Controllers\PostController.cs:line 285
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-08-02 13:49:12.841 +08:00 [INF] Request finished in 70826.7601ms 500 application/json
+2019-08-05 17:20:10.591 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-05 17:20:11.012 +08:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-05 17:20:11.069 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-08-05 17:20:11.260 +08:00 [INF] User profile is available. Using 'C:\Users\22955\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-08-05 17:21:22.703 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:4200/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-05 17:21:22.729 +08:00 [INF] Request finished in 26.5554ms 307 
+2019-08-05 17:21:23.011 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-05 17:21:23.017 +08:00 [INF] CORS policy execution successful.
+2019-08-05 17:21:23.062 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-05 17:21:23.246 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-08-05 17:21:23.252 +08:00 [INF] CORS policy execution successful.
+2019-08-05 17:21:23.728 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters","application/vnd.cgzl.hateoas+json"]) - Validation state: "Valid"
+2019-08-05 17:21:23.761 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-05 17:21:24.064 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-05 17:21:24.081 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-08-05 17:21:24.177 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-05 17:21:24.204 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-08-05 17:21:24.334 +08:00 [INF] value1
+2019-08-05 17:21:24.335 +08:00 [INF] Get All Post...
+2019-08-05 17:21:24.341 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 599.1029ms.
+2019-08-05 17:21:24.359 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[BlogDemo.Infrastructure.Resources.LinkResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-08-05 17:21:24.412 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 1158.2784000000001ms
+2019-08-05 17:21:24.424 +08:00 [INF] Request finished in 1413.0167ms 200 application/vnd.cgzl.hateoas+json; charset=utf-8
+2019-08-05 17:21:56.001 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:4200/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-05 17:21:56.003 +08:00 [INF] Request finished in 1.6307ms 307 
+2019-08-05 17:21:56.019 +08:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-05 17:21:56.026 +08:00 [INF] CORS policy execution successful.
+2019-08-05 17:21:56.030 +08:00 [INF] Request finished in 10.9708ms 204 
+2019-08-05 17:21:56.036 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-05 17:21:56.040 +08:00 [INF] CORS policy execution successful.
+2019-08-05 17:21:56.337 +08:00 [INF] Successfully validated the token.
+2019-08-05 17:21:56.342 +08:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-08-05 17:21:56.348 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-08-05 17:21:56.351 +08:00 [INF] CORS policy execution successful.
+2019-08-05 17:21:56.354 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters","application/vnd.cgzl.hateoas+json"]) - Validation state: "Valid"
+2019-08-05 17:21:56.363 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-05 17:21:56.377 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-05 17:21:56.383 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-08-05 17:21:56.387 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-05 17:21:56.396 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-08-05 17:21:56.402 +08:00 [INF] value1
+2019-08-05 17:21:56.404 +08:00 [INF] Get All Post...
+2019-08-05 17:21:56.406 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 43.8767ms.
+2019-08-05 17:21:56.412 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[BlogDemo.Infrastructure.Resources.LinkResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-08-05 17:21:56.418 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 67.347000000000008ms
+2019-08-05 17:21:56.428 +08:00 [INF] Request finished in 391.6545ms 200 application/vnd.cgzl.hateoas+json; charset=utf-8
+2019-08-05 17:23:35.623 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:4200/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-05 17:23:35.631 +08:00 [INF] Request finished in 7.4119ms 307 
+2019-08-05 17:23:35.816 +08:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-05 17:23:35.836 +08:00 [INF] CORS policy execution successful.
+2019-08-05 17:23:35.849 +08:00 [INF] Request finished in 32.318ms 204 
+2019-08-05 17:23:35.868 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-05 17:23:35.876 +08:00 [INF] CORS policy execution successful.
+2019-08-05 17:23:35.886 +08:00 [INF] Successfully validated the token.
+2019-08-05 17:23:35.891 +08:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-08-05 17:23:35.896 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-08-05 17:23:35.901 +08:00 [INF] CORS policy execution successful.
+2019-08-05 17:23:35.907 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters","application/vnd.cgzl.hateoas+json"]) - Validation state: "Valid"
+2019-08-05 17:23:35.915 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-05 17:23:35.929 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-05 17:23:35.934 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-08-05 17:23:35.943 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-05 17:23:35.956 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-08-05 17:23:35.968 +08:00 [INF] value1
+2019-08-05 17:23:35.972 +08:00 [INF] Get All Post...
+2019-08-05 17:23:35.984 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 63.5315ms.
+2019-08-05 17:23:36.003 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[BlogDemo.Infrastructure.Resources.LinkResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-08-05 17:23:36.033 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 131.81560000000002ms
+2019-08-05 17:23:36.049 +08:00 [INF] Request finished in 180.3648ms 200 application/vnd.cgzl.hateoas+json; charset=utf-8
+2019-08-05 17:25:37.530 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:4200/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-05 17:25:37.534 +08:00 [INF] Request finished in 9.3704ms 307 
+2019-08-05 17:25:37.898 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-05 17:25:37.931 +08:00 [INF] CORS policy execution successful.
+2019-08-05 17:25:37.947 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-05 17:25:37.951 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-08-05 17:25:37.963 +08:00 [INF] CORS policy execution successful.
+2019-08-05 17:25:37.966 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters","application/vnd.cgzl.hateoas+json"]) - Validation state: "Valid"
+2019-08-05 17:25:37.975 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-05 17:25:37.986 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-05 17:25:38.019 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-08-05 17:25:38.034 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-05 17:25:38.042 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-08-05 17:25:38.058 +08:00 [INF] value1
+2019-08-05 17:25:38.062 +08:00 [INF] Get All Post...
+2019-08-05 17:25:38.066 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 91.4636ms.
+2019-08-05 17:25:38.072 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[BlogDemo.Infrastructure.Resources.LinkResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-08-05 17:25:38.087 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 123.4351ms
+2019-08-05 17:25:38.089 +08:00 [INF] Request finished in 191.2586ms 200 application/vnd.cgzl.hateoas+json; charset=utf-8
+2019-08-05 17:25:41.604 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:4200/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-05 17:25:41.609 +08:00 [INF] Request finished in 5.286ms 307 
+2019-08-05 17:25:41.748 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/posts?orderBy=id%20desc&pageSize=10&pageIndex=0  
+2019-08-05 17:25:41.836 +08:00 [INF] CORS policy execution successful.
+2019-08-05 17:25:41.840 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-05 17:25:41.852 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi)
+2019-08-05 17:25:41.861 +08:00 [INF] CORS policy execution successful.
+2019-08-05 17:25:41.864 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) with arguments (["BlogDemo.Core.Entities.PostParameters","application/vnd.cgzl.hateoas+json"]) - Validation state: "Valid"
+2019-08-05 17:25:41.877 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-05 17:25:41.889 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-05 17:25:41.901 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-08-05 17:25:41.919 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-05 17:25:41.929 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Boby", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-08-05 17:25:41.940 +08:00 [INF] value1
+2019-08-05 17:25:41.941 +08:00 [INF] Get All Post...
+2019-08-05 17:25:41.946 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostController.Get (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 72.0784ms.
+2019-08-05 17:25:41.953 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[BlogDemo.Infrastructure.Resources.LinkResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-08-05 17:25:41.970 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostController.Get (BlogDemoApi) in 109.18260000000001ms
+2019-08-05 17:25:41.979 +08:00 [INF] Request finished in 230.7806ms 200 application/vnd.cgzl.hateoas+json; charset=utf-8
+2019-08-05 17:31:37.423 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:4200/api/postimages multipart/form-data; boundary=---------------------------7e319725c0836 29812
+2019-08-05 17:31:37.438 +08:00 [INF] CORS policy execution successful.
+2019-08-05 17:31:37.440 +08:00 [INF] Request finished in 17.5281ms 307 
+2019-08-05 17:31:37.494 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/postimages multipart/form-data; boundary=---------------------------7e319725c0836 29812
+2019-08-05 17:31:37.498 +08:00 [INF] CORS policy execution successful.
+2019-08-05 17:31:37.501 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-05 17:31:37.514 +08:00 [INF] Route matched with {action = "Upload", controller = "PostImage"}. Executing action BlogDemoApi.Controllers.PostImageController.Upload (BlogDemoApi)
+2019-08-05 17:31:37.517 +08:00 [INF] CORS policy execution successful.
+2019-08-05 17:31:37.561 +08:00 [INF] Executing action method BlogDemoApi.Controllers.PostImageController.Upload (BlogDemoApi) with arguments (["Microsoft.AspNetCore.Http.Internal.FormFile"]) - Validation state: "Valid"
+2019-08-05 17:31:37.590 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-05 17:31:37.782 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-05 17:31:38.024 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 40)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PostImages" ("FileName")
+VALUES (@p0);
+SELECT "Id"
+FROM "PostImages"
+WHERE changes() = 1 AND "Id" = last_insert_rowid();
+2019-08-05 17:31:38.247 +08:00 [INF] Executed action method BlogDemoApi.Controllers.PostImageController.Upload (BlogDemoApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 682.664ms.
+2019-08-05 17:31:38.289 +08:00 [INF] Executing ObjectResult, writing value of type 'BlogDemo.Infrastructure.Resources.PostImageResource'.
+2019-08-05 17:31:38.310 +08:00 [INF] Executed action BlogDemoApi.Controllers.PostImageController.Upload (BlogDemoApi) in 793.6458ms
+2019-08-05 17:31:38.325 +08:00 [INF] Request finished in 827.2209ms 200 application/json; charset=utf-8

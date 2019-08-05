@@ -3,6 +3,7 @@ import { PostService } from '../../services/post.service';
 import { postparmeters } from '../../models/post-parameters';
 import { ResultWithLinks } from '../../services/models/result-with-links';
 import { Post } from '../../models/Post';
+import { OpenIdConnectService } from 'src/app/shared/oidc/open-id-connect.service';
 
 @Component({
   selector: 'app-post-list',
@@ -14,7 +15,9 @@ export class PostListComponent implements OnInit {
   posts:Post[];
 
   postParameter=new postparmeters({orderBy:"id desc",pageSize:10,pageIndex:0});
-  constructor(private postService:PostService) { }
+  constructor(private postService:PostService,
+    private openIdConnectService:OpenIdConnectService
+    ) { }
 
   ngOnInit() {
     this.getPosts()

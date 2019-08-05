@@ -18,7 +18,7 @@ namespace BlogDemo.Infrastructure.Services
         /// </summary>
         public Dictionary<string, List<MappedProperty>> MappingDictionary { get; }
 
-        protected PropertyMapping(Dictionary<string, List<MappedProperty>> mappingDictionary)
+           protected PropertyMapping(Dictionary<string, List<MappedProperty>> mappingDictionary)
         {
             MappingDictionary = mappingDictionary;
             MappingDictionary[nameof(IEntity.Id)] = new List<MappedProperty>

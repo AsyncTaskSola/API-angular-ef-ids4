@@ -12,7 +12,8 @@ namespace BlogDemo.Infrastructure.Database.EntityConfigurations
         /// <param name="builder"></param>
         public void Configure(EntityTypeBuilder<Post> builder)
         {
-            builder.Property(x => x.Remark).IsRequired().HasMaxLength(200);
+           // builder.Property(x => x.Remark).IsRequired().HasMaxLength(200);
+            builder.Property(x => x.Remark).HasMaxLength(200);//好像去掉了IsRequired()也不行，可能要重新迁移吧
         }
     }
 }

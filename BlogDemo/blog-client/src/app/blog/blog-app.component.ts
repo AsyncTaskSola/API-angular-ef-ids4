@@ -13,6 +13,7 @@ export class BlogAppComponent implements OnInit {
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon('more_vert', sanitizer.bypassSecurityTrustResourceUrl('/assets/baseline-more_vert-24px.svg'));
     iconRegistry.addSvgIcon('baseline-menu', sanitizer.bypassSecurityTrustResourceUrl('/assets/baseline-menu-24px.svg'));
+    iconRegistry.addSvgIcon('baseline-add', sanitizer.bypassSecurityTrustResourceUrl('/assets/baseline-add-24px.svg'));
   }
 
   ngOnInit() {

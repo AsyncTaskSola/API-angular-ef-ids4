@@ -87,8 +87,7 @@ namespace BlogDemoApi
 
             #endregion
 
-            services.AddScoped<IPostRepository, PostRepository>();
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             //这些官网都有的，可以去看，连接在笔记中
 
             //映射
@@ -102,6 +101,14 @@ namespace BlogDemoApi
 
             services.AddTransient<IValidator<PostAddResource>, PostAddOrUpdateResourceValidator<PostAddResource>>();
             services.AddTransient<IValidator<PostUpdateResource>, PostAddOrUpdateResourceValidator<PostUpdateResource>>();
+            //图片上传
+            services.AddTransient<IValidator<PostImageResource>, PostImageResourceValidator>();
+
+            #region 接口注册 自写
+            services.AddScoped<IPostRepository, PostRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IPostImageRepository, PostImageRepository>();
+            #endregion
 
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             services.AddScoped<IUrlHelper>(factory =>
@@ -109,7 +116,6 @@ namespace BlogDemoApi
                 var actionContext = factory.GetService<IActionContextAccessor>().ActionContext;
                 return new UrlHelper(actionContext);
             });
-
             //注册容器
             var propertyMappingContainer = new PropertyMappingContainer();
             propertyMappingContainer.Register<PostPropertyMapping>();
@@ -152,7 +158,9 @@ namespace BlogDemoApi
             //app.UseExceptionHandler();
             app.UserMyExceptionHander(loggerFactory);
             app.UseCors("AllowAngularDevOrign");
+    
             app.UseHttpsRedirection();
+            app.UseStaticFiles();
             app.UseAuthentication();
             app.UseMvc();
         }

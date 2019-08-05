@@ -1,12 +1,16 @@
 <!-- <p>post-list works!</p> -->
 
 <div>
-    <ng-container *ngFor="let item of posts">
-    
-    <!-- {{item.title}} -->
-        
+
+    <!-- 这里的路由跳转，先等于一个smbit的button跳转了 -->
+        <button mat-fab color="warn" class="add-fab" [routerLink]="'/blog/write-post'" *ngIf='openIdConnectService.userAvailable'>
+           <!-- 这里是添加的图标 blog-app.component.ts注册 -->
+            <mat-icon aria-label="Add Post" svgIcon="baseline-add"></mat-icon>
+          </button>
+
+    <ng-container *ngFor="let item of posts">  
+    <!-- {{item.title}} -->       
     <app-post-card [post]="item"></app-post-card>
-  
     </ng-container>
     
 </div>

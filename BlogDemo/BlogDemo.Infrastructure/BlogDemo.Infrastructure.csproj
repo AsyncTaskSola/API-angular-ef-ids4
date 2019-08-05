@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20190802034333_AddPostImageToPost.cs" />
+    <Compile Remove="Migrations\20190802034630_new.cs" />
+    <Compile Remove="Migrations\20190802041901_AddPostImageToPost.cs" />
+    <Compile Remove="Migrations\20190802042733_AddPostImageToPost.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentValidation" Version="8.4.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.4" />
     <PackageReference Include="System.Linq.Dynamic.Core" Version="1.0.18" />

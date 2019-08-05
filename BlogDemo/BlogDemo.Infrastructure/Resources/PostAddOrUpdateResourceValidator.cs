@@ -12,10 +12,11 @@ namespace BlogDemo.Infrastructure.Resources
     {
         public PostAddOrUpdateResourceValidator()
         {
-            RuleFor(x => x.Remark)
-                .NotNull()
-                .WithName("信息")
-                .WithMessage("required|{PropertyName}是必填的  这里是个坑，因为之前迁移表的时候PostConfiguration类中设置了IsRequired()的子段导致了这个值现在不能为空");
+            //2019.8.2已经重新迁移填好这个坑了
+            //RuleFor(x => x.Remark)
+            //    .NotNull()
+            //    .WithName("信息")
+            //    .WithMessage("required|{PropertyName}是必填的  这里是个坑，因为之前迁移表的时候PostConfiguration类中设置了IsRequired()的子段导致了这个值现在不能为空");
 
             RuleFor(x => x.Title)
                 .NotNull()

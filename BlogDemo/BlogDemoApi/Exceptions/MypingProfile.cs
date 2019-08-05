@@ -19,6 +19,10 @@ namespace BlogDemoApi.Exceptions
             CreateMap< PostResource,Post>();
             CreateMap<PostAddResource, Post>();
             CreateMap<PostUpdateResource, Post>();
+
+            CreateMap<PostImage, PostImageResource>();
+            CreateMap<PostImageResource, PostImage>();
+
         }
         
     }
